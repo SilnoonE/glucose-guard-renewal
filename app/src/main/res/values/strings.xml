@@ -1,0 +1,294 @@
+<resources>
+    <string name="app_name">혈당지킴이 - 당뇨관리, 혈당기록</string>
+    <string name="nav_home">홈</string>
+    <string name="nav_record">기록</string>
+    <string name="nav_chart">차트</string>
+    <string name="nav_settings">설정</string>
+    <string name="today_summary">오늘의 건강 요약</string>
+    <string name="avg_glucose">평균 혈당</string>
+    <string name="total_insulin">인슐린 총량</string>
+    <string name="quick_record">빠른 기록하기</string>
+    <string name="glucose">혈당 기록</string>
+    <string name="insulin">인슐린 기록</string>
+    <string name="meal">식사/메모</string>
+    <string name="recent_records">최근 건강 기록</string>
+    <string name="unit_mgdl">mg/dL</string>
+    <string name="unit_dosage">단위</string>
+    <string name="medical_disclaimer">본 어플은 참고용이며, 정확한 진단은\n전문의와 상담하시기 바랍니다.</string>
+    <string name="report_ad_disclaimer">(리포트 저장 시 광고가 표시될 수 있습니다)</string>
+    <string name="splash_warm_message">오늘도 당신의 건강을 응원합니다</string>
+
+    <!-- Settings -->
+    <string name="settings_title">설정 및 정보</string>
+    <string name="health_calculator">신체 지수 건강 계산기</string>
+    <string name="health_calculator_desc">BMI, 적정 체중, 기초대사량을 확인하세요</string>
+    <string name="notif_scheduler">스마트 알림 스케줄러</string>
+    <string name="notif_scheduler_desc_on">식사 전후 잊지 않게 알려드려요 (접기)</string>
+    <string name="notif_scheduler_desc_off">식사 전후 잊지 않게 알려드려요 (펼치기)</string>
+    <string name="notif_morning">아침 알림</string>
+    <string name="notif_lunch">점심 알림</string>
+    <string name="notif_dinner">저녁 알림</string>
+    <string name="data_management">데이터 관리</string>
+    <string name="pdf_report_title">PDF 건강 리포트 생성</string>
+    <string name="pdf_report_desc">혈당·인슐린 기록을 차트와 요약 분석으로 정리해 PDF로 저장합니다.</string>
+    <string name="btn_create_report">리포트 만들기</string>
+    <string name="btn_export_data">데이터 내보내기</string>
+    <string name="btn_import_data">데이터 불러오기 (백업 파일)</string>
+    <string name="btn_clear_data">데이터 전체 초기화</string>
+    <string name="app_settings">앱 설정</string>
+    <string name="profile_image_setting">프로필 이미지 설정</string>
+    <string name="language_setting">언어 설정 (Language)</string>
+    <string name="health_guide">건강 지식 백과사전</string>
+    <string name="health_guide_desc">혈당 관리를 위해 꼭 알아야 할 핵심 정보를 모았습니다.</string>
+
+    <!-- Health Guide List Keys -->
+    <string name="guide_manage">건강 관리 노하우</string>
+    <string name="guide_target">혈당 목표 기준표</string>
+    <string name="guide_high">고혈당 대응 수칙</string>
+    <string name="guide_low">저혈당 구급 지침</string>
+    <string name="guide_food">식단 조절 가이드</string>
+
+    <string name="guide_food_rules_title">올바른 식품 섭취 수칙</string>
+    <string name="guide_f_s6_title">과일 섭취 방법</string>
+    <string name="guide_f_s6_content">과일은 비타민이 풍부하지만 당질도 포함하고 있습니다.\n\n• 주스보다 생과일 형태로 먹습니다.\n• 한 번에 많은 양을 먹지 않습니다.\n• 말린 과일이나 통조림 과일은 당질이 농축되어 있어 주의해야 합니다.\n• 과일을 식사 후 디저트로 많이 먹으면 전체 탄수화물 섭취량이 크게 늘어납니다.</string>
+    <string name="guide_f_s7_title">GI와 GL 이해하기</string>
+    <string name="guide_f_s7_content">GI(혈당지수)는 식품 섭취 후 혈당 상승 속도를, GL(당부하지수)은 GI와 실제 섭취량을 함께 고려한 지표입니다.\n\nGI가 낮은 식품도 많은 양을 먹으면 혈당이 높아질 수 있습니다. GI 숫자만 보고 좋고 나쁨을 단정하지 말고 실제 섭취량과 개인의 반응을 함께 확인하세요.</string>
+    <string name="guide_f_s8_title">외식할 때 확인할 내용</string>
+    <string name="guide_f_s8_content">• 밥이나 면의 양을 미리 조절합니다.\n• 튀김보다 구이, 찜, 삶은 메뉴를 선택합니다.\n• 소스와 드레싱은 따로 요청합니다.\n• 국물은 적게, 채소 반찬은 충분히 먹습니다.\n• 달콤한 음료 대신 물이나 무가당 음료를 선택합니다.</string>
+    <string name="guide_f_s9_title">간식 선택 방법</string>
+    <string name="guide_f_s9_content">무조건 간식을 먹기보다 배고픔과 혈당 상태를 확인합니다. 추천 예시:\n\n• 무가당 요구르트, 소량의 견과류, 삶은 달걀, 채소 스틱, 의료진이 권장한 양의 과일\n\n건강식품도 많이 먹으면 총열량과 탄수화물 섭취량이 증가함에 유의하세요.</string>
+    <string name="guide_f_s10_title">음료와 술</string>
+    <string name="guide_f_s10_content">물은 가장 기본적인 수분 섭취 방법입니다. 제로 음료는 당류 섭취를 줄이는 데 도움을 주지만 물을 완전히 대체하지는 마세요.\n\n술은 혈당을 높일 수도 있고 특히 인슐린 사용 시 늦은 저혈당을 유발할 수 있습니다. 빈속에 마시지 말고 의료진과 상담하세요.</string>
+
+    <!-- PDF Report Strings -->
+    <string name="pdf_header_title">혈당지킴이 건강 리포트</string>
+    <string name="pdf_period">분석 기간</string>
+    <string name="pdf_footer_disclaimer">본 리포트는 참고용이며 의학적 진단을 대신하지 않습니다.</string>
+    <string name="pdf_gen_date">리포트 생성일</string>
+    <string name="pdf_glucose_summary">혈당 요약</string>
+    <string name="pdf_insulin_summary">인슐린 요약</string>
+    <string name="pdf_max_glucose">최고 혈당</string>
+    <string name="pdf_min_glucose">최저 혈당</string>
+    <string name="pdf_normal_range">정상 범위</string>
+    <string name="pdf_total_dosage">총 투여량</string>
+    <string name="pdf_avg_dosage">평균 투여량</string>
+    <string name="pdf_dosage_count">투여 횟수</string>
+    <string name="pdf_overall_status">종합 상태</string>
+    <string name="pdf_daily_trend">일별 혈당 평균 추이</string>
+    <string name="pdf_weekly_trend">주별 혈당 평균 추이</string>
+    <string name="pdf_monthly_trend">월별 혈당 평균 추이</string>
+    <string name="pdf_detail_analysis">상세 시간대 분석 (최근 하루)</string>
+    <string name="pdf_ai_analysis">AI 건강 분석 요약</string>
+    <string name="pdf_memo_summary">주요 메모 요약</string>
+    <string name="pdf_all_records">전체 상세 기록</string>
+    <string name="pdf_col_time">시간</string>
+    <string name="pdf_col_glucose">혈당</string>
+    <string name="pdf_col_status">상태</string>
+    <string name="pdf_col_insulin">인슐린</string>
+    <string name="pdf_col_memo">메모</string>
+    <string name="pdf_no_records">기록된 데이터가 없습니다.</string>
+
+    <!-- Categories & Periods -->
+    <string name="cat_fasting">공복</string>
+    <string name="cat_before_meal">식전</string>
+    <string name="cat_after_meal">식후</string>
+    <string name="cat_before_bed">취침전</string>
+    <string name="cat_other">기타</string>
+
+    <string name="msg_today_status">현재 상태</string>
+    <string name="msg_no_data">데이터 부족</string>
+    <string name="msg_hello">안녕하세요, 건강한 하루 보내세요!</string>
+    <string name="msg_no_data_desc">오늘의 혈당 기록이 아직 없습니다.</string>
+    <string name="msg_no_data_insight">정확한 분석을 위해 혈당을 먼저 측정하고 기록해 보세요.</string>
+    <string name="msg_low_desc">평균 혈당이 목표보다 낮습니다.</string>
+    <string name="msg_low_insight">저혈당 위험이 있습니다. 적절한 당분 섭취와 식사 간격을 확인해 보세요.</string>
+    <string name="msg_high_desc">목표 범위를 초과하여 관리 중입니다.</string>
+    <string name="msg_high_insight">전반적으로 혈당이 높습니다. 활동량을 늘리거나 약물 복용 시간을 체크해 보세요.</string>
+    <string name="msg_high_after_meal_insight">식후 혈당이 눈에 띄게 높습니다. 식사 시 탄수화물 비중을 줄이고 식후 걷기를 권장합니다.</string>
+    <string name="msg_normal_desc">목표 범위를 완벽하게 유지하고 있습니다.</string>
+    <string name="msg_normal_insight">훌륭한 관리입니다! 꾸준한 생활 습관을 유지해 주세요. 충분한 수분 섭취도 잊지 마세요.</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">건강 기록 알림</string>
+    <string name="notif_morning_title">상쾌한 아침 알림</string>
+    <string name="notif_morning_content">공복 혈당 측정하셨나요? 오늘의 건강을 위해 기록해 보세요.</string>
+    <string name="notif_lunch_title">맛있는 점심 알림</string>
+    <string name="notif_lunch_content">식사 전후 혈당 관리가 중요해요! 잊지 말고 기록해 주세요.</string>
+    <string name="notif_dinner_title">편안한 저녁 알림</string>
+    <string name="notif_dinner_content">오늘 하루 마무리 전 혈당 체크! 규칙적인 기록이 건강을 지킵니다.</string>
+    <string name="notif_general_title">혈당 지킴이 알림</string>
+    <string name="notif_general_content">지금 혈당을 측정하거나 기록할 시간입니다.</string>
+
+    <!-- Input Screens -->
+    <string name="glucose_input_title">혈당 기록</string>
+    <string name="glucose_hint">혈당 수치 (mg/dL)</string>
+    <string name="date_time_label">날짜 및 시간</string>
+    <string name="category_label">구분</string>
+    <string name="memo_hint">메모 (필요 시)</string>
+    <string name="btn_save">저장하기</string>
+    <string name="btn_edit">수정하기</string>
+    <string name="chip_fasting">공복</string>
+    <string name="chip_breakfast_before">아침전</string>
+    <string name="chip_breakfast_after">아침후</string>
+    <string name="chip_lunch_before">점심전</string>
+    <string name="chip_lunch_after">점심후</string>
+    <string name="chip_dinner_before">저녁전</string>
+    <string name="chip_dinner_after">저녁후</string>
+    <string name="chip_sleep_before">취침전</string>
+
+    <string name="status_low">낮음</string>
+    <string name="status_high">높음</string>
+    <string name="status_normal">정상</string>
+
+    <!-- Health Guide Main -->
+    <string name="guide_main_title">건강 백과사전</string>
+    <string name="guide_main_subtitle">혈당 관리에 필요한 핵심 정보를 쉽고 자세하게 확인하세요.</string>
+    <string name="guide_tip_title">오늘의 건강 팁</string>
+    <string name="guide_tip_content">한 번의 혈당 수치보다 여러 날 동안 반복되는 변화 흐름을 확인하는 것이 중요해요.</string>
+    <string name="guide_read_time_fmt">%d분 분량</string>
+    <string name="guide_disclaimer_title">건강 정보 이용 안내</string>
+    <string name="guide_disclaimer_content">이 가이드는 일반적인 건강 정보 제공을 목적으로 하며 개인의 진단, 처방 또는 치료를 대신하지 않습니다. 혈당 목표와 약물, 인슐린, 운동 계획은 의료진과 상담하여 결정하세요.</string>
+
+    <!-- 1. 혈당 관리 방법 (Full Content) -->
+    <string name="guide_m_title">혈당 관리 방법</string>
+    <string name="guide_m_desc">측정 시간, 정확한 기록법, 혈당 변화의 원인을 알아봅니다.</string>
+    <string name="guide_m_keywords">측정 · 기록 · 패턴</string>
+    <string name="guide_m_intro">혈당 관리는 단순히 특정 수치를 낮추는 것이 아니라 식사, 운동, 수면, 스트레스, 약물 등 생활 전반이 혈당에 어떤 영향을 주는지 이해하는 과정입니다.\n\n한 번 측정한 혈당 수치만으로 상태를 판단하기보다 일정한 시간과 조건에서 꾸준히 측정하고 변화 흐름을 살펴보는 것이 중요합니다.</string>
+    <string name="guide_m_s1_title">혈당을 기록해야 하는 이유</string>
+    <string name="guide_m_s1_content">혈당은 하루 동안에도 식사 시간, 섭취한 음식, 운동량, 수면 상태, 스트레스, 약물 복용 여부에 따라 달라질 수 있습니다.\n\n정기적으로 혈당을 기록하면 다음과 같은 내용을 확인하는 데 도움이 됩니다.\n\n• 어떤 음식을 먹었을 때 혈당이 크게 상승하는지 확인할 수 있습니다.\n• 운동 전후 혈당 변화를 비교할 수 있습니다.\n• 공복혈당과 식후혈당의 차이를 파악할 수 있습니다.\n• 저혈당이나 고혈당이 자주 발생하는 시간대를 확인할 수 있습니다.\n• 약물이나 인슐린 사용 후 혈당 반응을 의료진과 공유할 수 있습니다.\n• 병원 진료 시 최근 혈당 변화 흐름을 보다 정확히 설명할 수 있습니다.\n\n혈당 기록에는 수치뿐 아니라 식사 내용, 운동, 약 복용, 몸 상태를 함께 남기면 원인을 파악하는 데 더욱 도움이 됩니다.</string>
+    <string name="guide_m_s2_title">언제 혈당을 측정하나요?</string>
+    <string name="guide_m_s2_content">측정 시간은 치료 방법과 의료진의 지시에 따라 달라질 수 있습니다. 일반적으로 확인할 수 있는 측정 시점은 다음과 같습니다.\n\n• 아침 식사 전 공복 상태\n• 식사를 시작한 시점을 기준으로 식후 약 2시간\n• 운동 전과 운동 후\n• 잠자기 전\n• 저혈당 증상이 의심될 때\n• 평소보다 심한 갈증이나 잦은 소변이 나타날 때\n• 몸이 아프거나 감염 증상이 있을 때\n• 새로운 약이나 인슐린 용량을 사용하기 시작했을 때\n\n매번 측정 시간을 다르게 하기보다 가능한 한 비슷한 조건에서 측정해야 변화 흐름을 비교하기 쉽습니다.</string>
+    <string name="guide_m_s3_title">공복혈당과 식후혈당의 차이</string>
+    <string name="guide_m_s3_content">공복혈당은 일반적으로 식사를 하지 않은 상태에서 측정한 혈당입니다. 공복혈당은 밤사이 간에서 방출되는 포도당과 인슐린 작용 상태의 영향을 받을 수 있습니다.\n\n식후혈당은 음식 섭취 후 혈당이 얼마나 상승하는지 확인하는 지표입니다. 특히 탄수화물의 종류와 양, 식사 속도, 식사 순서, 식후 활동량에 따라 식후혈당이 달라질 수 있습니다. 공복혈당은 괜찮지만 식후혈당이 자주 높은 사람도 있으므로 두 수치를 함께 확인하는 것이 좋습니다.</string>
+    <string name="guide_m_s4_title">정확한 혈당 측정 방법</string>
+    <string name="guide_m_s4_content">• 측정 전 손을 비누와 물로 깨끗이 씻고 완전히 말립니다.\n• 손에 음식물이나 당분이 묻어 있으면 실제보다 혈당이 높게 측정될 수 있습니다.\n• 알코올 솜을 사용했다면 완전히 마른 뒤 측정합니다.\n• 채혈침과 시험지는 제품 사용 방법에 맞게 사용합니다.\n• 시험지의 유효기간과 보관 상태를 확인합니다.\n• 손가락 끝 정중앙보다 옆부분을 사용하면 통증을 줄이는 데 도움이 될 수 있습니다.\n• 혈액을 억지로 강하게 짜내지 않습니다.\n• 평소와 크게 다른 수치가 나오면 손을 다시 씻고 재측정을 고려합니다.\n• 반복적으로 이상 수치가 나타나면 측정기 오류로만 판단하지 말고 의료진과 상담합니다.</string>
+    <string name="guide_m_s5_title">혈당에 영향을 주는 요인</string>
+    <string name="guide_m_s5_content">식사: 탄수화물 섭취량이 많거나 당이 빠르게 흡수되는 음식을 먹으면 식후혈당이 빠르게 올라갈 수 있습니다.\n\n운동: 대부분의 경우 적절한 운동은 혈당 관리에 도움이 되지만 운동 종류, 강도, 인슐린 사용 여부에 따라 저혈당이 발생할 수 있습니다.\n\n스트레스: 심한 스트레스가 지속되면 스트레스 호르몬의 영향으로 혈당이 상승할 수 있습니다.\n\n수면: 수면 시간이 부족하거나 수면의 질이 낮으면 식욕과 인슐린 반응에 영향을 줄 수 있습니다.\n\n감기와 감염: 몸이 아프거나 열이 날 때는 스트레스 호르몬이 증가하면서 평소보다 혈당이 높아질 수 있습니다.\n\n약물: 스테로이드 등 일부 약물은 혈당을 높일 수 있으며, 당뇨약이나 인슐린은 식사를 거르거나 운동량이 늘었을 때 저혈당 위험을 높일 수 있습니다.\n\n음주: 음주는 늦은 시간 저혈당을 유발할 수 있으므로 약물이나 인슐린을 사용하는 사람은 특히 주의해야 합니다.</string>
+    <string name="guide_m_s6_title">기록을 확인하는 방법</string>
+    <string name="guide_m_s6_content">하루 수치 하나만 보고 좋다거나 나쁘다고 판단하지 않습니다. 다음과 같은 반복 패턴을 살펴봅니다.\n\n• 아침 공복혈당이 지속적으로 높은지\n• 특정 식사 후 혈당이 자주 상승하는지\n• 운동한 날과 하지 않은 날의 차이가 있는지\n• 특정 시간대에 저혈당이 반복되는지\n• 주말과 평일의 혈당 차이가 있는지\n• 수면이 부족한 날 혈당이 달라지는지\n\n혈당지킴이 앱의 일별, 주별, 월별 차트를 통해 반복되는 패턴을 확인할 수 있습니다.</string>
+    <string name="guide_m_remember">한 번의 혈당 수치보다 여러 날 동안 반복되는 흐름이 더 중요합니다. 혈당 수치만 보고 약물이나 인슐린 용량을 임의로 변경하지 마세요.</string>
+    <string name="guide_m_doctor">혈당이 개인의 목표 범위를 지속적으로 벗어나거나, 원인을 알 수 없는 급격한 체중 변화, 반복되는 저혈당이 나타나면 반드시 의료진과 상담해야 합니다.</string>
+
+    <!-- 2. 혈당 관리 운동 추천 (Full Content) -->
+    <string name="guide_e_title">혈당 관리 운동 추천</string>
+    <string name="guide_e_desc">걷기, 근력 운동과 운동 전후 주의사항을 확인합니다.</string>
+    <string name="guide_e_keywords">유산소 · 근력 · 안전</string>
+    <string name="guide_e_intro">규칙적인 운동은 근육이 포도당을 에너지원으로 사용하는 데 도움을 주고 체중, 혈압, 심폐 체력과 전반적인 대사 건강을 관리하는 데 도움이 됩니다.\n\n다만 당뇨병 유형, 복용 약물, 인슐린 사용 여부, 합병증 및 현재 혈당에 따라 안전한 운동 방법이 달라질 수 있습니다.</string>
+    <string name="guide_e_s1_title">운동이 혈당에 주는 도움</string>
+    <string name="guide_e_s1_content">• 근육의 포도당 사용을 증가시키는 데 도움이 됩니다.\n• 인슐린이 더 효과적으로 작용하도록 도움을 줄 수 있습니다.\n• 식후 혈당 상승을 줄이는 데 도움이 될 수 있습니다.\n• 체중과 체지방 관리에 도움이 됩니다.\n• 심폐 기능과 근력을 향상하는 데 도움이 됩니다.\n• 혈압과 혈중 지질 관리에 긍정적인 영향을 줄 수 있습니다.\n• 스트레스 감소와 수면 개선에 도움이 될 수 있습니다.</string>
+    <string name="guide_e_s2_title">걷기</string>
+    <string name="guide_e_s2_content">추천 대상: 운동을 처음 시작하거나 체력이 낮은 사용자\n\n권장 방법: 평지에서 편안한 속도로 시작하고 몸 상태에 따라 속도와 시간을 조금씩 늘립니다.\n\n추천 시간: 식후 약 30분에서 1시간 사이에 가볍게 시작할 수 있습니다. 초보자는 10분씩 나누어 하루 여러 번 걸어도 좋습니다.\n\n효과: 식후 혈당 관리, 심폐 체력 향상, 체중 관리에 도움이 될 수 있습니다.\n\n주의: 어지러움, 식은땀, 손떨림, 심한 피로가 발생하면 즉시 운동을 중단하고 혈당을 확인합니다.</string>
+    <string name="guide_e_s3_title">자전거</string>
+    <string name="guide_e_s3_content">실내 자전거와 일반 자전거 모두 유산소 운동에 해당합니다. 관절에 가해지는 부담이 비교적 적어 걷기가 불편한 사용자에게 도움이 될 수 있습니다.\n\n처음에는 낮은 강도로 10~20분 정도 시작하고 점차 시간을 늘립니다.\n\n야외 자전거 이용 시 저혈당 증상으로 사고가 발생할 수 있으므로 포도당 식품과 휴대전화를 준비합니다.</string>
+    <string name="guide_e_s4_title">수영과 수중 운동</string>
+    <string name="guide_e_s4_content">수영은 전신 근육을 사용하는 유산소 운동입니다. 체중으로 인한 관절 부담을 줄이면서 운동할 수 있다는 장점이 있습니다.\n\n다만 혼자 수영할 경우 저혈당이나 어지러움이 발생했을 때 위험할 수 있으므로 보호자나 주변 사람에게 당뇨병이 있음을 알리는 것이 좋습니다. 인슐린 펌프나 연속혈당측정기를 사용하는 경우 방수 및 사용 방법을 반드시 확인합니다.</string>
+    <string name="guide_e_s5_title">근력 운동</string>
+    <string name="guide_e_s5_content">근력 운동은 근육량 유지와 일상생활 기능 향상에 도움이 됩니다. 예시:\n\n• 의자에서 천천히 일어났다 앉기\n• 벽을 이용한 팔굽혀펴기\n• 가벼운 아령 들기\n• 탄력 밴드 운동\n• 맨몸 스쿼트\n• 종아리 들어 올리기\n\n주요 근육을 골고루 사용하고 같은 부위를 연속해서 과도하게 운동하지 않습니다. 무거운 중량을 갑자기 들거나 숨을 참는 운동은 혈압을 급격히 높일 수 있으므로 주의합니다.</string>
+    <string name="guide_e_s6_title">스트레칭과 균형 운동</string>
+    <string name="guide_e_s6_content">스트레칭은 관절의 움직임과 유연성을 유지하는 데 도움이 됩니다. 운동 전에는 가볍게 몸을 움직여 체온을 올리고, 운동 후에는 천천히 근육을 풀어줍니다.\n\n고령자나 낙상 위험이 있는 사용자는 의자나 벽을 잡고 균형 운동을 시행합니다.</string>
+    <string name="guide_e_s7_title">운동 전 확인사항</string>
+    <string name="guide_e_s7_content">• 현재 몸 상태가 평소와 다른지 확인합니다.\n• 운동 전 혈당을 측정하도록 의료진에게 안내받았다면 측정합니다.\n• 인슐린이나 저혈당 위험이 있는 약을 사용하는지 확인합니다.\n• 포도당 정제, 사탕, 주스 등 빠르게 흡수되는 당질을 준비합니다.\n• 충분한 물을 준비합니다.\n• 발에 상처나 물집이 없는지 확인합니다.\n• 편안하고 발에 맞는 운동화를 착용합니다.\n• 야외 운동 시 의료정보 카드나 휴대전화를 지참합니다.</string>
+    <string name="guide_e_s8_title">운동 중 저혈당 증상</string>
+    <string name="guide_e_s8_content">• 식은땀, 손떨림, 갑작스러운 공복감, 두근거림, 어지러움, 집중력 저하, 힘이 빠지는 느낌, 시야가 흐려지는 증상\n\n이러한 증상이 나타나면 즉시 운동을 중단하고 혈당을 확인합니다. 저혈당으로 확인되면 15-15 법칙에 따라 대처합니다.</string>
+    <string name="guide_e_s9_title">운동을 피하거나 중단해야 하는 경우</string>
+    <string name="guide_e_s9_content">• 구토, 복통, 숨가쁨이 있는 경우\n• 심한 어지러움이나 흉통이 있는 경우\n• 혈당이 지나치게 높고 케톤이 확인되는 경우\n• 저혈당 증상이 있는 경우\n• 고열이나 심한 감염 증상이 있는 경우\n• 발에 심한 상처나 염증이 있는 경우\n• 의료진이 운동 제한을 지시한 경우</string>
+    <string name="guide_e_remember">처음부터 무리하게 운동하기보다 짧은 시간부터 시작하여 꾸준히 이어가는 것이 중요합니다. 인슐린이나 저혈당 위험이 있는 약을 사용하는 사용자는 운동 전후 혈당 변화에 특히 주의해야 합니다.</string>
+
+    <!-- 3. 고혈당 대처 방법 (Full Content) -->
+    <string name="guide_h_title">고혈당 대처 방법</string>
+    <string name="guide_h_desc">고혈당 증상과 원인, 즉시 진료가 필요한 상황을 확인합니다.</string>
+    <string name="guide_h_keywords">증상 · 대처 · 응급</string>
+    <string name="guide_h_intro">고혈당은 혈액 속 포도당이 개인의 목표 범위보다 높은 상태입니다.\n\n한 번 높게 측정되었다고 반드시 응급상황은 아니지만, 높은 혈당이 반복되거나 구토, 복통, 탈수, 의식 변화 등의 증상이 함께 나타나면 빠른 의료적 평가가 필요할 수 있습니다.</string>
+    <string name="guide_h_s1_title">고혈당의 주요 증상</string>
+    <string name="guide_h_s1_content">• 평소보다 심한 갈증, 물을 자주 마시게 됨\n• 소변 횟수 증가, 입안이 마름\n• 피로감과 무기력, 집중력 저하\n• 시야가 흐릿함, 피부와 상처 회복이 느려짐\n• 이유 없는 체중 감소, 두통, 메스꺼움\n\n고혈당이 심해지면 구토, 복통, 빠르고 깊은 호흡, 심한 탈수, 졸림, 의식 저하가 나타날 수 있습니다.</string>
+    <string name="guide_h_s2_title">고혈당의 흔한 원인</string>
+    <string name="guide_h_s2_content">• 평소보다 많은 탄수화물 섭취\n• 당이 많은 음료나 간식 섭취\n• 당뇨약 복용 누락 또는 인슐린 주사 누락/용량 오류\n• 인슐린 보관 상태 이상\n• 운동량 감소 또는 심한 스트레스\n• 수면 부족 또는 감기, 독감, 요로감염 등 감염\n• 스테로이드 등 혈당을 높일 수 있는 약물\n• 탈수 또는 인슐린 펌프 장치 문제</string>
+    <string name="guide_h_s3_title">혈당이 높게 나왔을 때 확인할 내용</string>
+    <string name="guide_h_s3_content">• 손을 씻고 다시 측정해도 높은지 확인합니다.\n• 최근 식사 시간과 음식 종류를 확인합니다.\n• 약이나 인슐린을 빠뜨리지 않았는지 확인합니다.\n• 평소와 다른 약을 복용했는지 확인합니다.\n• 열, 기침, 통증, 설사 등 감염 증상이 있는지 확인합니다.\n• 갈증, 잦은 소변, 구토, 복통이 있는지 확인합니다.\n• 인슐린 펌프 사용자는 주입 부위와 장치 이상을 확인합니다.\n• 의료진으로부터 케톤 검사 지시를 받은 사용자는 지침에 따라 검사합니다.</string>
+    <string name="guide_h_s4_title">우선적으로 할 수 있는 행동</string>
+    <string name="guide_h_s4_content">• 의식이 있고 수분 제한을 받지 않는 경우 물을 조금씩 자주 마십니다.\n• 의료진에게 받은 고혈당 대처 계획이 있다면 해당 계획을 따릅니다.\n• 처방된 약과 인슐린은 정해진 방법대로 사용합니다.\n• 혈당을 일정 간격으로 다시 확인합니다.\n• 측정값과 증상, 식사, 약 복용 내용을 기록합니다.\n• 몸 상태가 좋지 않다면 무리한 활동보다 휴식을 취합니다.\n• 혼자 판단하여 인슐린을 추가로 반복 투여하지 않습니다.</string>
+    <string name="guide_h_s5_title">하면 안 되는 행동</string>
+    <string name="guide_h_s5_content">• 약이나 인슐린 용량을 임의로 크게 늘리지 않습니다.\n• 혈당이 높다는 이유만으로 갑자기 격렬한 운동을 하지 않습니다.\n• 당이 많은 음료로 수분을 보충하지 않습니다.\n• 구토가 반복되는데 집에서 계속 기다리지 않습니다.\n• 측정기 오류라고 단정하고 증상을 무시하지 않습니다.\n• 처방약 복용을 임의로 중단하지 않습니다.</string>
+    <string name="guide_h_s6_title">고혈당과 운동</string>
+    <string name="guide_h_s6_content">가벼운 활동은 일부 사용자에게 도움이 될 수 있지만 모든 고혈당 상황에서 운동이 안전한 것은 아닙니다. 혈당이 매우 높거나 케톤이 있거나 구토, 복통, 심한 탈수, 숨가쁨이 있는 경우 운동을 피해야 합니다. 격렬한 운동은 스트레스 호르몬을 증가시켜 오히려 혈당을 높일 수 있습니다.</string>
+    <string name="guide_h_s7_title">케톤산증 위험 신호</string>
+    <string name="guide_h_s7_content">• 반복되는 구토, 심한 복통, 숨이 빠르고 깊어짐\n• 과일이나 아세톤과 비슷한 입 냄새\n• 심한 갈증과 탈수, 극심한 피로, 졸림, 의식 혼란\n\n특히 제1형 당뇨병이거나 인슐린을 사용하는 사용자는 이러한 증상을 가볍게 넘기지 않습니다.</string>
+    <string name="guide_h_s8_title">즉시 진료가 필요한 경우</string>
+    <string name="guide_h_s8_content">• 구토가 계속되어 물을 마실 수 없는 경우\n• 복통과 숨가쁨이 함께 나타나는 경우\n• 의식이 흐려지거나 반응이 둔해지는 경우\n• 심한 탈수 증상이 있는 경우\n• 혈당이 계속 상승하면서 증상도 악화되는 경우\n• 케톤 검사에서 이상이 확인된 경우\n• 임신 중 고혈당이 지속되는 경우\n• 어린이 또는 고령자에게 급격한 상태 변화가 나타나는 경우</string>
+    <string name="guide_h_warning">지속적인 고혈당은 혈관 손상과 만성 합병증의 주요 원인입니다.</string>
+    <string name="guide_h_remember">고혈당이 반복되는 원인을 찾기 위해 식사, 약물, 인슐린, 운동, 감염 여부를 함께 기록하세요. 심한 증상이 있는 고혈당은 단순히 물을 마시는 것만으로 해결하려 하지 말고 의료기관의 도움을 받아야 합니다.</string>
+
+    <!-- 4. 저혈당 대처 방법 (Full Content) -->
+    <string name="guide_l_title">저혈당 대처 방법</string>
+    <string name="guide_l_desc">15-15 법칙과 의식 저하 시 응급 대처법을 알아봅니다.</string>
+    <string name="guide_l_keywords">15-15 법칙 · 예방 · 응급</string>
+    <string name="guide_l_intro">저혈당은 일반적으로 혈당이 70mg/dL 미만으로 낮아진 상태를 의미합니다.\n\n저혈당은 빠르게 대처하면 회복될 수 있지만 적절히 대처하지 않으면 의식 저하, 경련, 사고로 이어질 수 있으므로 증상과 대처법을 미리 알아두는 것이 중요합니다.</string>
+    <string name="guide_l_s1_title">저혈당의 초기 증상</string>
+    <string name="guide_l_s1_content">• 갑작스러운 배고픔, 식은땀, 손떨림, 가슴 두근거림, 불안감, 어지러움, 창백함, 입술이나 손끝의 저림, 갑자기 힘이 빠지는 느낌, 두통</string>
+    <string name="guide_l_s2_title">저혈당이 심해질 때 나타날 수 있는 증상</string>
+    <string name="guide_l_s2_content">• 집중력 저하, 말이 어눌해짐, 평소와 다른 행동, 비틀거리거나 걷기 어려움, 시야 흐림, 심한 졸림, 의식 저하, 경련, 반응이 없는 상태\n\n저혈당 증상은 사람마다 다를 수 있으므로 본인에게 자주 나타나는 증상을 기록해두는 것이 좋습니다.</string>
+    <string name="guide_l_s3_title">저혈당의 흔한 원인</string>
+    <string name="guide_l_s3_content">• 식사를 거르거나 늦게 한 경우, 평소보다 적게 먹은 경우\n• 인슐린을 과다하게 사용한 경우, 저혈당 위험이 있는 약을 복용한 경우\n• 평소보다 운동량이 많았던 경우, 운동 후 충분히 먹지 않은 경우\n• 빈속에 술을 마신 경우, 구토나 설사로 음식 섭취가 줄어든 경우\n• 체중이 감소했지만 약 용량을 조절하지 않은 경우\n• 신장 기능 변화로 약효가 오래 지속되는 경우</string>
+    <string name="guide_l_s4_title">의식이 있을 때 15-15 법칙</string>
+    <string name="guide_l_s4_content">1단계: 혈당을 측정하여 70mg/dL 미만인지 확인합니다. 측정할 수 없더라도 저혈당 증상이 강하게 의심되면 우선 대처가 필요할 수 있습니다.\n\n2단계: 빠르게 흡수되는 당질 15~20g을 섭취합니다. (포도당 정제, 설탕/꿀 1큰술, 일반 주스/탄산음료 약 175mL, 사탕 약 3~4개)\n\n3단계: 15분간 안정을 취합니다.\n\n4단계: 15분 후 혈당을 다시 측정합니다.\n\n5단계: 혈당이 아직 70mg/dL 미만이거나 증상이 계속되면 동일한 방법을 반복합니다.\n\n6단계: 혈당이 회복된 뒤 다음 식사까지 시간이 많이 남았다면 의료진의 안내에 따라 간단한 간식을 섭취할 수 있습니다.</string>
+    <string name="guide_l_s5_title">적합하지 않은 음식</string>
+    <string name="guide_l_s5_content">초콜릿, 아이스크림, 크림이 많은 빵 등 지방 함량이 높은 음식은 당 흡수가 느릴 수 있어 응급 저혈당 처치용으로 적합하지 않을 수 있습니다.\n\n무설탕 음료나 제로 음료는 혈당을 빠르게 올리는 용도로 사용할 수 없습니다. 한꺼번에 너무 많은 음식을 먹으면 저혈당 회복 후 혈당이 지나치게 높아질 수 있습니다.</string>
+    <string name="guide_l_s6_title">의식이 없거나 삼키기 어려운 경우</string>
+    <string name="guide_l_s6_content">• 음식이나 물을 억지로 먹이지 않습니다. 기도가 막힐 수 있으므로 사탕을 입에 넣지 않습니다.\n• 즉시 119에 신고합니다.\n• 가능하면 환자를 옆으로 눕혀 기도를 확보합니다.\n• 의료진에게 처방받은 글루카곤이 있고 사용 교육을 받은 보호자는 지침에 따라 사용합니다.\n• 회복하더라도 의료기관의 평가가 필요할 수 있습니다.</string>
+    <string name="guide_l_s7_title">운전 중 저혈당</string>
+    <string name="guide_l_s7_content">운전 중 저혈당 증상이 나타나면 즉시 안전한 장소에 정차합니다. 혈당을 확인하고 저혈당이면 15-15 법칙에 따라 대처합니다.\n\n증상이 호전되었다고 바로 다시 운전하지 말고 혈당이 안정되고 판단력이 완전히 회복되었는지 확인합니다. 차량에는 포도당 정제, 사탕, 주스 등을 준비해두는 것이 좋습니다.</string>
+    <string name="guide_l_s8_title">운동 중 또는 운동 후 저혈당</string>
+    <string name="guide_l_s8_content">운동 중뿐 아니라 운동이 끝난 뒤 몇 시간 후에도 저혈당이 발생할 수 있습니다. 인슐린이나 저혈당 위험 약물을 사용하는 경우 운동 시간, 강도, 식사, 약물 조정을 의료진과 미리 상담합니다. 야간 저혈당이 반복된다면 운동 시간과 강도를 기록하여 진료 시 공유합니다.</string>
+    <string name="guide_l_s9_title">저혈당 예방 방법</string>
+    <string name="guide_l_s9_content">• 식사를 거르지 않고, 약과 인슐린 사용 시간을 지킵니다.\n• 평소보다 운동량이 많을 때는 혈당 변화에 주의합니다.\n• 외출 시 빠르게 흡수되는 당질을 휴대합니다.\n• 가족과 가까운 사람에게 저혈당 증상과 대처법을 알려둡니다.\n• 의료정보 카드나 팔찌 사용을 고려합니다.\n• 반복되는 저혈당의 시간과 원인을 기록합니다.</string>
+    <string name="guide_l_doctor">저혈당이 일주일에 여러 번 반복되거나, 야간 저혈당이 잦은 경우, 저혈당 증상을 잘 느끼지 못하는 경우(저혈당 무감지증)는 반드시 전문의와 상담하여 약물이나 인슐린 용량을 조정해야 합니다.</string>
+    <string name="guide_l_remember">저혈당은 참거나 기다리는 것이 아니라 빠르게 확인하고 즉시 대처해야 합니다. 의식이 없는 사람에게 음식이나 음료를 먹이지 마세요.</string>
+
+    <!-- 5. 혈당 음식 가이드 (Full Content) -->
+    <string name="guide_f_title">혈당 음식 가이드</string>
+    <string name="guide_f_desc">균형 잡힌 식사 구성과 외식, 간식 선택 방법을 확인합니다.</string>
+    <string name="guide_f_keywords">식사 · 탄수화물 · GI</string>
+    <string name="guide_f_intro">당뇨 식사는 특별한 음식만 먹는 식단이 아니라 적절한 양을 규칙적으로 먹고, 다양한 영양소를 균형 있게 섭취하는 건강한 식사입니다.\n\n특정 음식 하나가 혈당을 치료하거나 즉시 낮춰주는 것은 아니며 전체 식사량, 탄수화물의 종류와 양, 조리법, 식사 시간과 활동량을 함께 살펴보는 것이 중요합니다.</string>
+    <string name="guide_f_s1_title">혈당과 탄수화물</string>
+    <string name="guide_f_s1_content">탄수화물은 우리 몸의 중요한 에너지원이지만 섭취 후 포도당으로 분해되면서 혈당에 직접적인 영향을 줍니다.\n\n탄수화물을 완전히 끊기보다 한 끼 섭취량을 일정하게 유지하고 정제된 탄수화물 대신 식이섬유가 풍부한 식품을 선택하는 것이 중요합니다.\n\n포함 식품: 밥, 빵, 떡, 면류, 감자, 고구마, 과일, 우유, 설탕 등. 건강식으로 알려진 음식도 양이 많으면 혈당을 높일 수 있습니다.</string>
+    <string name="guide_f_s2_title">한 끼 식사 구성 방법</string>
+    <string name="guide_f_s2_content">접시를 기준으로 다음과 같이 구성할 수 있습니다.\n\n• 접시의 절반: 다양한 비전분 채소\n• 접시의 1/4: 생선, 두부, 달걀, 살코기 등 단백질 식품\n• 접시의 1/4: 잡곡밥, 현미, 통곡물, 감자 등 탄수화물 식품\n\n국과 찌개는 건더기 위주로 먹고 짠 국물 섭취를 줄입니다. 식사량은 개인의 체중, 활동량, 약물, 혈당 목표에 따라 달라질 수 있습니다.</string>
+    <string name="guide_f_s3_title">식사 순서 활용하기</string>
+    <string name="guide_f_s3_content">채소와 단백질 식품을 먼저 먹고 탄수화물을 나중에 먹는 식사 순서는 일부 사용자에게 식후혈당 상승을 완만하게 하는 데 도움이 될 수 있습니다.\n\n1. 채소와 나물\n2. 생선, 두부, 달걀, 살코기\n3. 밥, 빵, 면 등 탄수화물\n\n다만 식사 순서만 믿고 전체 섭취량을 과도하게 늘려서는 안 됩니다.</string>
+    <string name="guide_f_s4_title">권장할 수 있는 식품</string>
+    <string name="guide_f_s4_content">• 채소: 브로콜리, 양배추, 오이, 버섯, 시금치, 파프리카 등\n• 통곡물: 현미, 잡곡, 통밀 등 식이섬유가 있는 곡물\n• 단백질: 생선, 두부, 콩, 달걀, 껍질 제거 닭고기, 살코기\n• 건강한 지방: 견과류, 들기름, 올리브유 소량\n• 유제품: 무가당 요구르트, 저지방 우유</string>
+    <string name="guide_f_s5_title">섭취를 줄이면 좋은 식품</string>
+    <string name="guide_f_s5_content">• 설탕 음료, 과일주스, 달콤한 커피, 탄산음료\n• 사탕, 초콜릿, 케이크, 도넛, 과자, 흰빵\n• 튀김, 패스트푸드, 가공육(햄, 소시지)\n• 짠 국물, 과도한 야식, 술\n\n완전히 금지하기보다 섭취 빈도와 양을 줄이고 대체 식품을 찾는 것이 중요합니다.</string>
+    <string name="guide_f_s11_title">식사 기록 활용 방법</string>
+    <string name="guide_f_s11_content">식사 시간, 음식 종류, 섭취량, 전후 혈당을 함께 기록하세요. 같은 음식을 먹었을 때 혈당이 어떻게 달라지는지 비교하면 본인에게 맞는 식사 방법을 찾는 데 도움이 됩니다.</string>
+    <string name="guide_f_remember">혈당 관리에 좋은 음식이라도 섭취량이 많으면 혈당이 상승할 수 있습니다. 특정 식품 하나보다 규칙적인 식사, 적절한 양, 균형 잡힌 구성이 중요합니다.</string>
+
+    <!-- Common Section Titles & UI -->
+    <string name="guide_label_keywords">핵심 키워드: </string>
+    <string name="guide_keywords_label">핵심 키워드: </string>
+    <string name="guide_label_steps">대응 조치</string>
+    <string name="guide_label_emergency">응급 상황 안내</string>
+    <string name="guide_label_remember">꼭 기억하세요</string>
+    <string name="guide_label_doctor">의료진 상담이 필요한 경우</string>
+    <string name="guide_label_source">참고 출처</string>
+    <string name="guide_source_full">참고: 대한당뇨병학회 2025 당뇨병 진료지침, 대한당뇨병학회 당뇨병과 식생활, 질병관리청 국가건강정보포털, ADA Standards of Care in Diabetes 2026\n본 내용은 일반적인 건강 정보이며 개인의 진단과 치료를 대신하지 않습니다.</string>
+    <string name="guide_emergency_alert">응급상황에서는 즉시 119 또는 의료기관에 도움을 요청하세요.</string>
+
+    <!-- Added missing keywords for list -->
+    <string name="guide_m_keywords_full">측정 · 기록 · 패턴</string>
+    <string name="guide_e_keywords_full">유산소 · 근력 · 안전</string>
+    <string name="guide_h_keywords_full">증상 · 대처 · 응급</string>
+    <string name="guide_l_keywords_full">15-15 법칙 · 예방 · 응급</string>
+    <string name="guide_f_keywords_full">식사 · 탄수화물 · GI</string>
+
+    <!-- Missing Target Guide strings -->
+    <string name="guide_target_title">과학적 혈당 조절 목표</string>
+    <string name="guide_target_subtitle">연령 및 합병증 유무에 따라 개별 목표는 다를 수 있습니다.</string>
+    <string name="guide_target_item1">당화혈색소 (HbA1c): 6.5% 미만 권고</string>
+    <string name="guide_target_item2">공복 혈당: 70 ~ 130 mg/dL</string>
+    <string name="guide_target_item3">식후 2시간 혈당: 180 mg/dL 미만</string>
+    <string name="guide_target_info">당화혈색소는 최근 3개월간의 평균 혈당을 나타내는 중요한 지표로, 합병증 예방을 위해 철저한 관리가 필요합니다.</string>
+    <string name="guide_low_warning">70 mg/dL 미만인 경우 즉각적인 조치가 필요합니다.</string>
+    <string name="guide_source_kda">출처: 대한당뇨병학회(KDA) 당뇨병 진료지침 제8판</string>
+    <string name="guide_source_ada">출처: American Diabetes Association (ADA) Standards of Care in Diabetes 2024</string>
+</resources>

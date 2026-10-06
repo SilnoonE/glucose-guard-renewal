@@ -1,0 +1,26 @@
+# Local credentials, signing, databases and generated output
+local.properties
+secrets.properties
+admob.properties
+keystore.properties
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+*key01
+.env
+.env.*
+!.env.example
+google-services.json
+service-account*.json
+*.db
+*.db-*
+*.sqlite*
+*.apk
+*.aab
+.gradle/
+.idea/
+**/build/
+captures/
+.DS_Store

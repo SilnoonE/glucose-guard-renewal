@@ -1,0 +1,264 @@
+<resources>
+    <string name="app_name">血糖値守り - 糖尿病管理、血糖記録</string>
+    <string name="nav_home">ホーム</string>
+    <string name="nav_record">記録</string>
+    <string name="nav_chart">チャート</string>
+    <string name="nav_settings">設定</string>
+    <string name="today_summary">今日の健康サマリー</string>
+    <string name="avg_glucose">平均血糖値</string>
+    <string name="total_insulin">インス린総量</string>
+    <string name="quick_record">クイック記録</string>
+    <string name="glucose">血糖記録</string>
+    <string name="insulin">インス린記録</string>
+    <string name="meal">食事/メモ</string>
+    <string name="recent_records">最近の健康記録</string>
+    <string name="unit_mgdl">mg/dL</string>
+    <string name="unit_dosage">単位</string>
+    <string name="medical_disclaimer">本アプリは参考用です。正確な診断については専門医にご相談ください。</string>
+    <string name="report_ad_disclaimer">(リポート保存時に広告が表示される場合があります)</string>
+    <string name="splash_warm_message">今日もあなたの健康を応援します</string>
+
+    <!-- Settings -->
+    <string name="settings_title">設定と情報</string>
+    <string name="health_calculator">身体指数健康計算機</string>
+    <string name="health_calculator_desc">BMI、適正体重、基礎代謝量を確認してください</string>
+    <string name="notif_scheduler">スマート通知スケジューラ</string>
+    <string name="notif_scheduler_desc_on">食前食後の記録忘れを防ぎます (閉じる)</string>
+    <string name="notif_scheduler_desc_off">食前食後の記録忘れを防ぎます (展開)</string>
+    <string name="notif_morning">朝の通知</string>
+    <string name="notif_lunch">昼の通知</string>
+    <string name="notif_dinner">夜の通知</string>
+    <string name="data_management">データ管理</string>
+    <string name="pdf_report_title">PDF健康リポート作成</string>
+    <string name="pdf_report_desc">血糖・インスリン記録をチャートとサマリー分析で整理し、PDFとして保存します。</string>
+    <string name="btn_create_report">リポートを作成</string>
+    <string name="btn_export_data">データをエクスポート</string>
+    <string name="btn_import_data">データをインポート (バックアップファイル)</string>
+    <string name="btn_clear_data">データをすべて初期化</string>
+    <string name="app_settings">アプリ設定</string>
+    <string name="profile_image_setting">プロフィール画像設定</string>
+    <string name="language_setting">言語設定 (Language Setting)</string>
+    <string name="health_guide">健康百科事典</string>
+    <string name="guide_manage">血糖管理方法</string>
+    <string name="guide_target">血糖目標基準表</string>
+    <string name="guide_high">高血糖への対応</string>
+    <string name="guide_low">低血糖救急ガイド</string>
+    <string name="guide_food">食事管理ガイド</string>
+
+    <!-- PDF Report Strings -->
+    <string name="pdf_header_title">血糖値守り 健康リポート</string>
+    <string name="pdf_period">分析期間</string>
+    <string name="pdf_footer_disclaimer">本リポートは参考用であり、医学的診断に代わるものではありません。</string>
+    <string name="pdf_gen_date">リポート作成日</string>
+    <string name="pdf_glucose_summary">血糖サマリー</string>
+    <string name="pdf_insulin_summary">インス린サマリー</string>
+    <string name="pdf_max_glucose">最高血糖値</string>
+    <string name="pdf_min_glucose">最低血糖値</string>
+    <string name="pdf_normal_range">正常範囲</string>
+    <string name="pdf_total_dosage">総投与量</string>
+    <string name="pdf_avg_dosage">平均投与量</string>
+    <string name="pdf_dosage_count">投与回数</string>
+    <string name="pdf_overall_status">総合状態</string>
+    <string name="pdf_daily_trend">日別血糖平均推移</string>
+    <string name="pdf_weekly_trend">週別血糖平均推移</string>
+    <string name="pdf_monthly_trend">月別血糖平均推移</string>
+    <string name="pdf_detail_analysis">詳細時間帯分析 (最近の1日)</string>
+    <string name="pdf_ai_analysis">AI健康分析サマリー</string>
+    <string name="pdf_memo_summary">主要メモサマリー</string>
+    <string name="pdf_all_records">全詳細記録</string>
+    <string name="pdf_col_time">時間</string>
+    <string name="pdf_col_glucose">血糖値</string>
+    <string name="pdf_col_status">状態</string>
+    <string name="pdf_col_insulin">インス린</string>
+    <string name="pdf_col_memo">メモ</string>
+    <string name="pdf_no_records">記録されたデータがありません。</string>
+
+    <!-- Categories & Periods -->
+    <string name="cat_fasting">空腹時</string>
+    <string name="cat_before_meal">食前</string>
+    <string name="cat_after_meal">食後</string>
+    <string name="cat_before_bed">就寝前</string>
+    <string name="cat_other">その他</string>
+
+    <string name="msg_today_status">現在の状態</string>
+    <string name="msg_no_data">データ不足</string>
+    <string name="msg_hello">こんにちは、健康な一日をお過ごしください！</string>
+    <string name="msg_no_data_desc">今日の血糖記録がまだありません。</string>
+    <string name="msg_no_data_insight">正確な分析のために、まず血糖値を測定して記録してください。</string>
+    <string name="msg_low_desc">平均血糖値が目標より低いです。</string>
+    <string name="msg_low_insight">低血糖のリスクがあります。</string>
+    <string name="msg_high_desc">目標範囲を超えて管理されています。</string>
+    <string name="msg_high_insight">全体的に血糖値が高いです。</string>
+    <string name="msg_high_after_meal_insight">食後の血糖値が著しく高いです。</string>
+    <string name="msg_normal_desc">目標範囲を完璧に維持しています。</string>
+    <string name="msg_normal_insight">素晴らしい管理です！</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">健康記録通知</string>
+    <string name="notif_morning_title">さわやかな朝の通知</string>
+    <string name="notif_morning_content">空腹時血糖値を測定しましたか？</string>
+    <string name="notif_lunch_title">おいしい昼の通知</string>
+    <string name="notif_lunch_content">食前食後の血糖管理が重要です。</string>
+    <string name="notif_dinner_title">穏やかな夜の通知</string>
+    <string name="notif_dinner_content">今日一日の締めくくりに血糖チェック！</string>
+    <string name="notif_general_title">血糖値守り通知</string>
+    <string name="notif_general_content">今、血糖値を測定または記録する時間です。</string>
+
+    <!-- Input Screens -->
+    <string name="glucose_input_title">血糖記録</string>
+    <string name="glucose_hint">血糖値 (mg/dL)</string>
+    <string name="date_time_label">日時</string>
+    <string name="category_label">区分</string>
+    <string name="memo_hint">メモ (必要に応じて)</string>
+    <string name="btn_save">保存する</string>
+    <string name="btn_edit">修正する</string>
+    <string name="chip_fasting">空腹時</string>
+    <string name="chip_breakfast_before">朝食前</string>
+    <string name="chip_breakfast_after">朝食後</string>
+    <string name="chip_lunch_before">昼食前</string>
+    <string name="chip_lunch_after">昼食後</string>
+    <string name="chip_dinner_before">夕食前</string>
+    <string name="chip_dinner_after">夕食後</string>
+    <string name="chip_sleep_before">就寝前</string>
+
+    <string name="status_low">低い</string>
+    <string name="status_high">高い</string>
+    <string name="status_normal">正常</string>
+
+    <!-- Health Guide Main -->
+    <string name="guide_main_title">健康百科事典</string>
+    <string name="guide_main_subtitle">あなたに必要な血糖管理のヒントを詳しく確認してください。</string>
+    <string name="guide_tip_title">今日の健康ヒント</string>
+    <string name="guide_tip_content">単一の数値より長期的な傾向を見ることが重要です。</string>
+    <string name="guide_read_time_fmt">%d 分で読める</string>
+    <string name="guide_disclaimer_title">利用案内</string>
+    <string name="guide_disclaimer_content">本ガイドは情報提供のみを目的としています。医師に相談してください。</string>
+
+    <!-- Full Guide Keys -->
+    <string name="guide_m_intro">血糖管理は代謝の健康を理解することです。</string>
+    <string name="guide_m_s1_title">なぜ記録するのか</string>
+    <string name="guide_m_s1_content">記録することでパターンと食事の影響を把握できます。</string>
+    <string name="guide_m_s2_title">いつ測定するか</string>
+    <string name="guide_m_s2_content">空腹時、食後2時間、就寝前などが基本です。</string>
+    <string name="guide_m_s3_title">空腹時と食後の違い</string>
+    <string name="guide_m_s3_content">両方の指標をバランスよく確認しましょう。</string>
+    <string name="guide_m_s4_title">正確な測定方法</string>
+    <string name="guide_m_s4_content">清潔な手で正しく測定してください。</string>
+    <string name="guide_m_s5_title">変動要因</string>
+    <string name="guide_m_s5_content">食事、運動、ストレスなどが影響します。</string>
+    <string name="guide_m_s6_title">記録の確認方法</string>
+    <string name="guide_m_s6_content">長期的なトレンドを確認しましょう。</string>
+    <string name="guide_m_remember">継続的な管理が大切です。</string>
+    <string name="guide_m_doctor">数値が高い場合は受診してください。</string>
+
+    <string name="guide_e_title">運動のアドバイス</string>
+    <string name="guide_e_intro">運動はインスリン感受性を高めます。</string>
+    <string name="guide_e_s1_title">効果</string>
+    <string name="guide_e_s1_content">血糖値を下げ、筋肉量を維持します。</string>
+    <string name="guide_e_s2_title">ウォーキング</string>
+    <string name="guide_e_s2_content">食後30分の散歩が効果的です。</string>
+    <string name="guide_e_s3_title">自転車</string>
+    <string name="guide_e_s3_content">関節への負担が少ない有酸素運動です。</string>
+    <string name="guide_e_s4_title">水泳</string>
+    <string name="guide_e_s4_content">全身運動で効果的です。</string>
+    <string name="guide_e_s5_title">筋トレ</string>
+    <string name="guide_e_s5_content">基礎代謝を高め、血糖を安定させます。</string>
+    <string name="guide_e_s6_title">ストレッチ</string>
+    <string name="guide_e_s6_content">柔軟性を維持しましょう。</string>
+    <string name="guide_e_s7_title">事前確認</string>
+    <string name="guide_e_s7_content">体調を確認してから始めましょう。</string>
+    <string name="guide_e_s8_title">運動中低血糖</string>
+    <string name="guide_e_s8_content">震えや冷や汗に注意してください。</string>
+    <string name="guide_e_s9_title">中止すべき場合</string>
+    <string name="guide_e_s9_content">体調不良時は無理をしないでください。</string>
+    <string name="guide_e_remember">無理のない範囲で続けましょう。</string>
+
+    <string name="guide_h_intro">高血糖は血管を傷つける可能性があります。</string>
+    <string name="guide_h_s1_title">主要症状</string>
+    <string name="guide_h_s1_content">喉の渇きや疲労感に注意しましょう。</string>
+    <string name="guide_h_s2_title">原因</string>
+    <string name="guide_h_s2_content">食事、薬の飲み忘れ、ストレスなど。</string>
+    <string name="guide_h_s3_title">確認事項</string>
+    <string name="guide_h_s3_content">再度正しく測定してください。</string>
+    <string name="guide_h_s4_title">応急対応</string>
+    <string name="guide_h_s4_content">水分を摂り、安静にしてください。</string>
+    <string name="guide_h_s5_title">禁止事項</string>
+    <string name="guide_h_s5_content">自己判断での増薬は危険です。</string>
+    <string name="guide_h_s6_title">運動との関係</string>
+    <string name="guide_h_s6_content">高すぎる時は運動を控えましょう。</string>
+    <string name="guide_h_s7_title">緊急サイン</string>
+    <string name="guide_h_s7_content">意識混濁はすぐに救급車を。</string>
+    <string name="guide_h_s8_title">受診の目安</string>
+    <string name="guide_h_s8_content">症状が改善しない場合は病院へ。</string>
+    <string name="guide_h_warning">血管障害のリスクがあります。</string>
+    <string name="guide_h_remember">原因の把握が第一歩です。</string>
+
+    <string name="guide_l_intro">低血糖は迅速な対応が必要です。</string>
+    <string name="guide_l_s1_title">初期症状</string>
+    <string name="guide_l_s1_content">震えや強い空腹感。</string>
+    <string name="guide_l_s2_title">進行症状</string>
+    <string name="guide_l_s2_content">意識低下や混乱。</string>
+    <string name="guide_l_s3_title">原因</string>
+    <string name="guide_l_s3_content">空腹での運動、薬の過剰など。</string>
+    <string name="guide_l_s4_title">15-15ルール</string>
+    <string name="guide_l_s4_content">糖分15gを摂り、15分後に再測定。</string>
+    <string name="guide_l_s5_title">不適当な食品</string>
+    <string name="guide_l_s5_content">チョコやアイスは吸収が遅いです。</string>
+    <string name="guide_l_s6_title">意識がない場合</string>
+    <string name="guide_l_s6_content">口に何も入れず、すぐに119へ。</string>
+    <string name="guide_l_s7_title">運転中</string>
+    <string name="guide_l_s7_content">すぐに停車して対応してください。</string>
+    <string name="guide_l_s8_title">運動後</string>
+    <string name="guide_l_s8_content">数時間後も注意が必要です。</string>
+    <string name="guide_l_s9_title">予防方法</string>
+    <string name="guide_l_s9_content">補食を携帯しましょう。</string>
+    <string name="guide_l_doctor">頻発する場合は相談しましょう。</string>
+    <string name="guide_l_remember">待たずにすぐ糖分を。</string>
+
+    <string name="guide_f_intro">健康的なバランス食が基本です。</string>
+    <string name="guide_f_s1_title">糖質の選び方</string>
+    <string name="guide_f_s1_content">食物繊維の多い穀物を選びましょう。</string>
+    <string name="guide_f_s2_title">バランスの良い一皿</string>
+    <string name="guide_f_s2_content">野菜1/2, タンパク1/4, 穀物1/4。</string>
+    <string name="guide_f_s3_title">食べる順番</string>
+    <string name="guide_f_s3_content">野菜から先に食べましょう。</string>
+    <string name="guide_f_s4_title">推奨食品</string>
+    <string name="guide_f_s4_content">青魚、豆腐、緑黄色野菜など。</string>
+    <string name="guide_f_s5_title">控えたい食品</string>
+    <string name="guide_f_s5_content">砂糖入りの飲料や菓子パン。</string>
+    <string name="guide_f_s6_title">果物の摂り方</string>
+    <string name="guide_f_s6_content">ジュースより生の果物を適量で。</string>
+    <string name="guide_f_s7_title">GI値の理解</string>
+    <string name="guide_f_s7_content">上昇速度を意識しましょう。</string>
+    <string name="guide_f_s8_title">外食のコツ</string>
+    <string name="guide_f_s8_content">揚げ物より焼き物を選びましょう。</string>
+    <string name="guide_f_s9_title">間食の選び方</string>
+    <string name="guide_f_s9_content">ナッツや無糖ヨーグルト。</string>
+    <string name="guide_f_s10_title">飲み物と酒</string>
+    <string name="guide_f_s10_content">お酒は空腹時を避けましょう。</string>
+    <string name="guide_f_s11_title">食事記録</string>
+    <string name="guide_f_s11_content">何を食べたか記録しましょう。</string>
+    <string name="guide_f_remember">量が最も重要です。</string>
+
+    <string name="guide_label_keywords">キーワード</string>
+    <string name="guide_label_steps">対応</string>
+    <string name="guide_label_emergency">緊急情報</string>
+    <string name="guide_label_remember">ポイント</string>
+    <string name="guide_label_doctor">医師に相談</string>
+    <string name="guide_label_source">出典</string>
+    <string name="guide_source_full">KDAおよびADAガイドライン参考。</string>
+    <string name="guide_emergency_alert">緊急時は病院へ。</string>
+
+    <string name="guide_m_keywords_full">測定 · 記録 · パターン</string>
+    <string name="guide_e_keywords_full">有酸素 · 筋力 · 安全</string>
+    <string name="guide_h_keywords_full">症状 · 対応 · 緊急</string>
+    <string name="guide_l_keywords_full">15-15ルール · 予防 · SOS</string>
+    <string name="guide_f_keywords_full">食事 · 糖質 · GI</string>
+
+    <string name="guide_target_title">血糖目標値</string>
+    <string name="guide_target_subtitle">個人に合わせた目標を設定しましょう。</string>
+    <string name="guide_target_item1">HbA1c: 6.5%未満推奨</string>
+    <string name="guide_target_item2">空腹時: 70 ~ 130 mg/dL</string>
+    <string name="guide_target_item3">食後: 180 mg/dL未満</string>
+    <string name="guide_target_info">3ヶ月の平均指標を意識しましょう。</string>
+</resources>

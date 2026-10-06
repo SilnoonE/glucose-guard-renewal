@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_light"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="혈당 분석 리포트"
+                android:textColor="@color/text_main"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
+                app:tabIndicatorColor="@color/primary"
+                app:tabIndicatorHeight="3dp"
+                app:tabSelectedTextColor="@color/primary"
+                app:tabTextColor="@color/text_sub"
+                app:tabRippleColor="@null">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="일별" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="주별" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="월별" />
+            </com.google.android.material.tabs.TabLayout>
+
+            <!-- 혈당 변화 추이 차트 카드 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeColor="@color/border_color"
+                app:strokeWidth="1.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/tv_chart_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="📈 혈당 변화 추이"
+                            android:textColor="@color/text_main"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_toggle_height"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:insetLeft="0dp"
+                            android:insetTop="0dp"
+                            android:insetRight="0dp"
+                            android:insetBottom="0dp"
+                            android:padding="0dp"
+                            app:icon="@android:drawable/ic_menu_zoom"
+                            app:iconGravity="textStart"
+                            app:iconPadding="0dp"
+                            app:iconSize="18dp"
+                            app:iconTint="@color/primary"
+                            app:strokeColor="@color/primary"
+                            app:strokeWidth="1dp" />
+                    </RelativeLayout>
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/line_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:layout_marginHorizontal="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_line_zoom_out"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:insetLeft="0dp"
+                            android:insetTop="0dp"
+                            android:insetRight="0dp"
+                            android:insetBottom="0dp"
+                            android:text="-"
+                            android:textColor="@color/primary"
+                            android:textSize="20sp"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="@color/primary" />
+
+                        <View
+                            android:layout_width="12dp"
+                            android:layout_height="match_parent" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_line_zoom_in"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:insetLeft="0dp"
+                            android:insetTop="0dp"
+                            android:insetRight="0dp"
+                            android:insetBottom="0dp"
+                            android:text="+"
+                            android:textColor="@color/primary"
+                            android:textSize="20sp"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="@color/primary" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 하루 상세 차트 카드 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeColor="@color/border_color"
+                app:strokeWidth="1.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="📅 하루 상세 차트"
+                        android:textColor="@color/text_main"
+                        android:textStyle="bold" />
+
+                    <!-- 날짜 선택 영역 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp">
+
+                        <ImageButton
+                            android:id="@+id/btn_prev_day"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@android:drawable/ic_media_previous"
+                            app:tint="@color/primary" />
+
+                        <TextView
+                            android:id="@+id/tv_selected_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:padding="8dp"
+                            android:text="2024-03-25"
+                            android:textColor="@color/text_main"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/btn_next_day"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@android:drawable/ic_media_next"
+                            app:tint="@color/primary" />
+                    </LinearLayout>
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/day_detail_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_marginHorizontal="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 인슐린 차트 카드 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeColor="@color/border_color"
+                app:strokeWidth="1.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="💉 인슐린 투여 분석"
+                        android:textColor="@color/text_main"
+                        android:textStyle="bold" />
+
+                    <com.github.mikephil.charting.charts.CombinedChart
+                        android:id="@+id/insulin_combined_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_marginHorizontal="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_bar_zoom_out"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:insetLeft="0dp"
+                            android:insetTop="0dp"
+                            android:insetRight="0dp"
+                            android:insetBottom="0dp"
+                            android:text="-"
+                            android:textColor="@color/secondary"
+                            android:textSize="20sp"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="@color/secondary" />
+
+                        <View
+                            android:layout_width="12dp"
+                            android:layout_height="match_parent" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_bar_zoom_in"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:insetLeft="0dp"
+                            android:insetTop="0dp"
+                            android:insetRight="0dp"
+                            android:insetBottom="0dp"
+                            android:text="+"
+                            android:textColor="@color/secondary"
+                            android:textSize="20sp"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="@color/secondary" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center"
+                android:text="💡 팁: 차트를 옆으로 밀거나 확대하여 상세 데이터를 확인하세요."
+                android:textColor="@color/text_sub"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 전체화면 차트 레이어 -->
+    <LinearLayout
+        android:id="@+id/layout_full_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="#F8F9FA">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="혈당 변화 추이 (전체화면)"
+                android:textColor="@color/text_main"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFullZoomOut"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:textSize="18sp"
+                    android:insetLeft="0dp"
+                    android:insetRight="0dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFullZoomIn"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:textSize="18sp"
+                    android:insetLeft="0dp"
+                    android:insetRight="0dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCloseFullChart"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="닫기"
+                    android:textColor="@color/text_sub" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/fullLineChart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="16dp" />
+    </LinearLayout>
+
+</FrameLayout>

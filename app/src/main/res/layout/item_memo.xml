@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:rippleColor="#FFE082"
+    app:cardBackgroundColor="#FFF8E1"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#FFE082">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HEALTH NOTE"
+                android:textColor="#F57F17"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2024.03.24 14:30"
+                android:textColor="@color/text_sub"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_memo_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:lineSpacingExtra="4sp"
+            android:text="기록된 메모 내용이 여기에 표시됩니다. 클릭하여 전체 내용을 확인하고 관리하실 수 있습니다."
+            android:textColor="@color/text_main"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_edit_memo"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="편집"
+                android:textColor="@color/primary"
+                android:textSize="12sp"
+                app:rippleColor="@color/primary_light" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_delete_memo"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="삭제"
+                android:textColor="#D32F2F"
+                android:textSize="12sp"
+                app:rippleColor="#FFEBEE" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

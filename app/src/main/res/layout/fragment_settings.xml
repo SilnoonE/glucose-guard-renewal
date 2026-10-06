@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textColor="@color/text_main"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 건강 계산기 (기존 스타일로 복구) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/primary">
+
+            <LinearLayout
+                android:id="@+id/btn_health_calculator_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_menu_edit"
+                    app:tint="@color/primary" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/health_calculator"
+                        android:textColor="@color/text_main"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/health_calculator_desc"
+                        android:textColor="@color/text_sub"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    app:tint="@color/primary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 알림 스케줄러 (기존 스타일로 복구) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/primary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:id="@+id/btn_toggle_notification_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@android:drawable/ic_lock_idle_alarm"
+                        app:tint="@color/primary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/notif_scheduler"
+                            android:textColor="@color/text_main"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_notification_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/notif_scheduler_desc_off"
+                            android:textColor="@color/text_sub"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switch_master_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_expand_arrow"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/arrow_down_float"
+                        app:tint="@color/primary" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="@color/border_color"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/layout_detail_notifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- 아침 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:id="@+id/btn_morning_time"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/notif_morning"
+                                android:textColor="@color/text_main"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/tv_morning_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="08:00"
+                                android:textColor="@color/primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switch_morning"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <!-- 점심 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:id="@+id/btn_lunch_time"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/notif_lunch"
+                                android:textColor="@color/text_main"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/tv_lunch_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12:00"
+                                android:textColor="@color/primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switch_lunch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <!-- 저녁 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:id="@+id/btn_dinner_time"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/notif_dinner"
+                                android:textColor="@color/text_main"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/tv_dinner_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="18:00"
+                                android:textColor="@color/primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switch_dinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 건강 지식 백과사전 (접었다 펴기 가능) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white"
+            app:strokeWidth="1.5dp"
+            app:strokeColor="#FFB300">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/btn_toggle_guide_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF8E1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_menu_agenda"
+                        app:tint="#FF8F00" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/health_guide"
+                            android:textColor="#5D4037"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_guide_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/health_guide_desc"
+                            android:textColor="#8D6E63"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_guide_expand_arrow"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/arrow_up_float"
+                        app:tint="#FF8F00" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider_guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFE082" />
+
+                <LinearLayout
+                    android:id="@+id/layout_guide_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:id="@+id/btn_guide_manage"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/guide_manage"
+                        android:textColor="@color/text_main"
+                        android:textSize="15sp" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="20dp" android:background="#F5F5F5" />
+
+                    <TextView
+                        android:id="@+id/btn_guide_target"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/guide_target"
+                        android:textColor="@color/text_main"
+                        android:textSize="15sp" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="20dp" android:background="#F5F5F5" />
+
+                    <TextView
+                        android:id="@+id/btn_guide_high"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/guide_high"
+                        android:textColor="@color/text_main"
+                        android:textSize="15sp" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="20dp" android:background="#F5F5F5" />
+
+                    <TextView
+                        android:id="@+id/btn_guide_low"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/guide_low"
+                        android:textColor="@color/text_main"
+                        android:textSize="15sp" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="20dp" android:background="#F5F5F5" />
+
+                    <TextView
+                        android:id="@+id/btn_guide_food"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/guide_food"
+                        android:textColor="@color/text_main"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/data_management"
+            android:textColor="@color/text_sub"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:letterSpacing="0.1" />
+
+        <!-- PDF 리포트 생성 카드 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="1dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@android:drawable/ic_menu_save"
+                        app:tint="@color/primary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pdf_report_title"
+                            android:textColor="@color/text_main"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/pdf_report_desc"
+                            android:textColor="@color/text_sub"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_create_report"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/primary_light"
+                    android:text="@string/btn_create_report"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"
+                    app:cornerRadius="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="1dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/btn_export_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:text="@string/btn_export_data"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="20dp" android:background="@color/border_color" />
+
+                <TextView
+                    android:id="@+id/btn_import_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:text="@string/btn_import_data"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="20dp" android:background="@color/border_color" />
+
+                <TextView
+                    android:id="@+id/btn_clear_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:text="@string/btn_clear_data"
+                    android:textColor="#FF5252"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/app_settings"
+            android:textColor="@color/text_sub"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:letterSpacing="0.1" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="1dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/btn_change_profile_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:text="@string/profile_image_setting"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="20dp" android:background="@color/border_color" />
+
+                <TextView
+                    android:id="@+id/btn_change_language"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:text="@string/language_setting"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:text="@string/medical_disclaimer"
+            android:textColor="@color/text_sub"
+            android:textSize="11sp"
+            android:lineSpacingExtra="4dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

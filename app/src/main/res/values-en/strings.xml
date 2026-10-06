@@ -1,0 +1,270 @@
+<resources>
+    <string name="app_name">Glucose Tracker - Diabetes Management</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_record">Record</string>
+    <string name="nav_chart">Chart</string>
+    <string name="nav_settings">Settings</string>
+    <string name="today_summary">Today\'s Health Summary</string>
+    <string name="avg_glucose">Avg Glucose</string>
+    <string name="total_insulin">Total Insulin</string>
+    <string name="quick_record">Quick Record</string>
+    <string name="glucose">Glucose</string>
+    <string name="insulin">Insulin</string>
+    <string name="meal">Meal/Memo</string>
+    <string name="recent_records">Recent Health Records</string>
+    <string name="unit_mgdl">mg/dL</string>
+    <string name="unit_dosage">Unit</string>
+    <string name="medical_disclaimer">This app is for reference only. Please consult a specialist for accurate diagnosis.</string>
+    <string name="report_ad_disclaimer">(Ads may appear when saving reports)</string>
+    <string name="splash_warm_message">Supporting your health today</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings &amp; Info</string>
+    <string name="health_calculator">Body Health Calculator</string>
+    <string name="health_calculator_desc">Check BMI, ideal weight, and BMR</string>
+    <string name="notif_scheduler">Smart Notif Scheduler</string>
+    <string name="notif_scheduler_desc_on">Reminds you before/after meals (Collapse)</string>
+    <string name="notif_scheduler_desc_off">Reminds you before/after meals (Expand)</string>
+    <string name="notif_morning">Morning Notif</string>
+    <string name="notif_lunch">Lunch Notif</string>
+    <string name="notif_dinner">Dinner Notif</string>
+    <string name="data_management">Data Management</string>
+    <string name="pdf_report_title">PDF Health Report</string>
+    <string name="pdf_report_desc">Saves glucose/insulin records as PDF with charts and analysis.</string>
+    <string name="btn_create_report">Create Report</string>
+    <string name="btn_export_data">Export Data</string>
+    <string name="btn_import_data">Import Data (Backup File)</string>
+    <string name="btn_clear_data">Reset All Data</string>
+    <string name="app_settings">App Settings</string>
+    <string name="profile_image_setting">Set Profile Image</string>
+    <string name="language_setting">Language Setting (Language)</string>
+    <string name="health_guide">Health Knowledge Encyclopedia</string>
+    <string name="health_guide_desc">A complete collection of essential knowledge for glucose management.</string>
+
+    <!-- Health Guide List Keys -->
+    <string name="guide_manage">Health Management Tips</string>
+    <string name="guide_target">Glucose Target Chart</string>
+    <string name="guide_high">Hyperglycemia Response</string>
+    <string name="guide_low">Hypoglycemia Guide</string>
+    <string name="guide_food">Diet Control Guide</string>
+
+    <string name="guide_food_rules_title">Healthy Food Intake Rules</string>
+    <string name="guide_f_s6_title">Fruit Intake Rules</string>
+    <string name="guide_f_s6_content">Fruits are rich in vitamins but also contain sugar.\n\n• Eat whole fruits rather than juice.\n• Do not eat large amounts at once.\n• Be careful with dried or canned fruits as sugar is concentrated.\n• Eating too much fruit as dessert significantly increases total carb intake.</string>
+    <string name="guide_f_s7_title">Understanding GI and GL</string>
+    <string name="guide_f_s7_content">GI (Glycemic Index) indicates the speed of glucose rise, while GL (Glycemic Load) considers both GI and actual portion size.\n\nEven low GI foods can raise glucose if eaten in large amounts. Don\'t judge based on GI numbers alone; check your personal response.</string>
+    <string name="guide_f_s8_title">Dining Out Tips</string>
+    <string name="guide_f_s8_content">• Adjust portions of rice or noodles in advance.\n• Choose grilled, steamed, or boiled options over fried.\n• Ask for sauces and dressings on the side.\n• Eat plenty of vegetable side dishes and less soup.</string>
+    <string name="guide_f_s9_title">Wise Snack Choices</string>
+    <string name="guide_f_s9_content">Check your hunger and glucose before snacking. Recommendations:\n\n• Unsweetened yogurt, small portions of nuts, boiled eggs, vegetable sticks.\n\nBe aware that even healthy snacks increase total calories and carbs.</string>
+    <string name="guide_f_s10_title">Drinks and Alcohol</string>
+    <string name="guide_f_s10_content">Water is the most basic hydration. Zero-sugar drinks help reduce sugar intake but shouldn\'t completely replace water.\n\nAlcohol can raise glucose or cause delayed hypoglycemia, especially with insulin. Don\'t drink on an empty stomach.</string>
+
+    <!-- PDF Report Strings -->
+    <string name="pdf_header_title">Glucose Tracker Health Report</string>
+    <string name="pdf_period">Analysis Period</string>
+    <string name="pdf_footer_disclaimer">This report is for reference only and not a medical diagnosis.</string>
+    <string name="pdf_gen_date">Report Gen Date</string>
+    <string name="pdf_glucose_summary">Glucose Summary</string>
+    <string name="pdf_insulin_summary">Insulin Summary</string>
+    <string name="pdf_max_glucose">Max Glucose</string>
+    <string name="pdf_min_glucose">Min Glucose</string>
+    <string name="pdf_normal_range">Normal Range</string>
+    <string name="pdf_total_dosage">Total Dosage</string>
+    <string name="pdf_avg_dosage">Avg Dosage</string>
+    <string name="pdf_dosage_count">Dosage Count</string>
+    <string name="pdf_overall_status">Overall Status</string>
+    <string name="pdf_daily_trend">Daily Glucose Trend</string>
+    <string name="pdf_weekly_trend">Weekly Glucose Trend</string>
+    <string name="pdf_monthly_trend">Monthly Glucose Trend</string>
+    <string name="pdf_detail_analysis">Detailed Time Analysis (Recent Day)</string>
+    <string name="pdf_ai_analysis">AI Health Analysis Summary</string>
+    <string name="pdf_memo_summary">Key Memo Summary</string>
+    <string name="pdf_all_records">All Detailed Records</string>
+    <string name="pdf_col_time">Time</string>
+    <string name="pdf_col_glucose">Glucose</string>
+    <string name="pdf_col_status">Status</string>
+    <string name="pdf_col_insulin">Insulin</string>
+    <string name="pdf_col_memo">Memo</string>
+    <string name="pdf_no_records">No data recorded.</string>
+
+    <!-- Categories & Periods -->
+    <string name="cat_fasting">Fasting</string>
+    <string name="cat_before_meal">Before Meal</string>
+    <string name="cat_after_meal">After Meal</string>
+    <string name="cat_before_bed">Before Bed</string>
+    <string name="cat_other">Other</string>
+
+    <string name="msg_today_status">Current Status</string>
+    <string name="msg_no_data">Insufficient Data</string>
+    <string name="msg_hello">Hello, have a healthy day!</string>
+    <string name="msg_no_data_desc">No glucose records for today yet.</string>
+    <string name="msg_no_data_insight">Please measure and record your glucose for accurate analysis.</string>
+    <string name="msg_low_desc">Average glucose is lower than the target.</string>
+    <string name="msg_low_insight">Risk of hypoglycemia. Check your sugar intake and meal intervals.</string>
+    <string name="msg_high_desc">Managing above the target range.</string>
+    <string name="msg_high_insight">Overall glucose is high. Increase activity or check medication timing.</string>
+    <string name="msg_high_after_meal_insight">Post-meal glucose is significantly high. Reduce carbs and consider walking.</string>
+    <string name="msg_normal_desc">Perfectly maintaining within the target range.</string>
+    <string name="msg_normal_insight">Excellent management! Keep up your healthy lifestyle and stay hydrated.</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">Health Record Reminders</string>
+    <string name="notif_morning_title">Good Morning!</string>
+    <string name="notif_morning_content">Did you measure your fasting glucose? Record it for your health.</string>
+    <string name="notif_lunch_title">Good Afternoon!</string>
+    <string name="notif_lunch_content">Glucose management after meals is important! Don\'t forget to record it.</string>
+    <string name="notif_dinner_title">Good Evening!</string>
+    <string name="notif_dinner_content">Check your glucose before ending the day! Consistent records keep you healthy.</string>
+    <string name="notif_general_title">Glucose Tracker Reminder</string>
+    <string name="notif_general_content">It\'s time to measure or record your glucose.</string>
+
+    <!-- Input Screens -->
+    <string name="glucose_input_title">Glucose Record</string>
+    <string name="glucose_hint">Glucose Level (mg/dL)</string>
+    <string name="date_time_label">Date &amp; Time</string>
+    <string name="category_label">Category</string>
+    <string name="memo_hint">Memo (Optional)</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_edit">Update</string>
+    <string name="chip_fasting">Fasting</string>
+    <string name="chip_breakfast_before">Before Breakfast</string>
+    <string name="chip_breakfast_after">After Breakfast</string>
+    <string name="chip_lunch_before">Before Lunch</string>
+    <string name="chip_lunch_after">After Lunch</string>
+    <string name="chip_dinner_before">Before Dinner</string>
+    <string name="chip_dinner_after">After Dinner</string>
+    <string name="chip_sleep_before">Before Bed</string>
+
+    <string name="status_low">Low</string>
+    <string name="status_high">High</string>
+    <string name="status_normal">Normal</string>
+
+    <!-- Health Guide Main -->
+    <string name="guide_main_title">Health Encyclopedia</string>
+    <string name="guide_main_subtitle">Essential glucose management tips for you.</string>
+    <string name="guide_tip_title">Today\'s Health Tip</string>
+    <string name="guide_tip_content">It is more important to look at trends over several days than a single glucose reading.</string>
+    <string name="guide_read_time_fmt">%d min read</string>
+    <string name="guide_disclaimer_title">Usage Information</string>
+    <string name="guide_disclaimer_content">This guide is for general information only and does not replace medical diagnosis or treatment.</string>
+
+    <!-- Guide Content -->
+    <string name="guide_m_title">Glucose Management</string>
+    <string name="guide_m_desc">Learn about measuring times, recording methods, and causes of fluctuations.</string>
+    <string name="guide_m_keywords">Measure · Record · Patterns</string>
+    <string name="guide_m_intro">Glucose management is about understanding how diet, exercise, and stress affect your body.</string>
+    <string name="guide_m_s1_title">Why Record Glucose?</string>
+    <string name="guide_m_s1_content">Recording helps you identify food impacts, exercise effects, and patterns for doctor visits.</string>
+    <string name="guide_m_s2_title">When to Measure?</string>
+    <string name="guide_m_s2_content">Measure fasting, 2h after meals, before/after exercise, and when feeling unwell.</string>
+    <string name="guide_m_s3_title">Fasting vs Post-meal</string>
+    <string name="guide_m_s3_content">Fasting shows baseline levels; post-meal shows response to food and carbs.</string>
+    <string name="guide_m_s4_title">Accurate Measurement</string>
+    <string name="guide_m_s4_content">Wash hands, dry completely, check strip expiration, and don\'t squeeze too hard.</string>
+    <string name="guide_m_s5_title">Factors Affecting Glucose</string>
+    <string name="guide_m_s5_content">Diet, exercise, stress, sleep, illness, medication, and alcohol all impact levels.</string>
+    <string name="guide_m_s6_title">Checking Records</string>
+    <string name="guide_m_s6_content">Look for patterns: persistent morning highs, meal spikes, or nighttime lows.</string>
+    <string name="guide_m_remember">Patterns are more important than single numbers. Do not change doses without consulting a doctor.</string>
+    <string name="guide_m_doctor">Consult if levels are consistently out of range or if you experience unexplained weight loss.</string>
+
+    <string name="guide_e_title">Exercise Tips</string>
+    <string name="guide_e_desc">Safe walking, strength training, and precautions.</string>
+    <string name="guide_e_keywords">Aerobic · Strength · Safety</string>
+    <string name="guide_e_intro">Exercise helps muscles use glucose and improves insulin sensitivity.</string>
+    <string name="guide_e_s1_title">Benefits of Exercise</string>
+    <string name="guide_e_s1_content">Reduces spikes, aids weight loss, improves heart health and sleep quality.</string>
+    <string name="guide_e_s2_title">Walking</string>
+    <string name="guide_e_s2_content">Perfect for beginners. Start slow and aim for 30 minutes after meals.</string>
+    <string name="guide_e_s3_title">Cycling</string>
+    <string name="guide_e_s3_content">Lower joint stress. Carry glucose tablets for outdoor rides.</string>
+    <string name="guide_e_s4_title">Swimming</string>
+    <string name="guide_e_s4_content">Full body workout. Inform staff or lifeguards of your condition for safety.</string>
+    <string name="guide_e_s5_title">Strength Training</string>
+    <string name="guide_e_s5_content">Maintains muscle mass. Try squats, elastic bands, or light weights.</string>
+    <string name="guide_e_s6_title">Stretching</string>
+    <string name="guide_e_s6_content">Maintains flexibility and prevents injury during workouts.</string>
+    <string name="guide_e_s7_title">Check Before Exercise</string>
+    <string name="guide_e_s7_content">Check glucose, carry sugar, stay hydrated, and check feet for blisters.</string>
+    <string name="guide_e_s8_title">Hypoglycemia During Exercise</string>
+    <string name="guide_e_s8_content">Sweating, shaking, or dizziness. Stop immediately and check glucose.</string>
+    <string name="guide_e_s9_title">When to Skip Exercise</string>
+    <string name="guide_e_s9_content">Skip if you have fever, vomiting, chest pain, or very high glucose levels.</string>
+    <string name="guide_e_remember">Consistency over intensity. Always carry emergency glucose.</string>
+
+    <string name="guide_h_title">Hyperglycemia</string>
+    <string name="guide_h_desc">Symptoms, causes, and when to seek urgent care.</string>
+    <string name="guide_h_keywords">Symptoms · Response · Urgent</string>
+    <string name="guide_h_intro">High blood sugar occurs when glucose levels stay above your target range.</string>
+    <string name="guide_h_s1_title">Core Symptoms</string>
+    <string name="guide_h_s1_content">Extreme thirst, frequent urination, fatigue, and blurred vision.</string>
+    <string name="guide_h_s2_title">Common Causes</string>
+    <string name="guide_h_s2_content">Too many carbs, missed meds/insulin, stress, illness, or dehydration.</string>
+    <string name="guide_h_s3_title">What to Check</string>
+    <string name="guide_h_s3_content">Re-measure after washing hands, check meal timing, and look for signs of infection.</string>
+    <string name="guide_h_s4_title">Immediate Actions</string>
+    <string name="guide_h_s4_content">Drink water, follow your doctor\'s high-glucose plan, and rest.</string>
+    <string name="guide_h_s5_title">What NOT to Do</string>
+    <string name="guide_h_s5_content">Don\'t change insulin dose without a plan. Avoid intense exercise if levels are very high.</string>
+    <string name="guide_h_s6_title">Hyperglycemia &amp; Exercise</string>
+    <string name="guide_h_s6_content">Light activity is okay for some, but avoid it if you feel nauseous or have ketones.</string>
+    <string name="guide_h_s7_title">Ketoacidosis Warnings</string>
+    <string name="guide_h_s7_content">Vomiting, abdominal pain, fruity breath, or confusion. This is an emergency.</string>
+    <string name="guide_h_s8_title">Seek Care Immediately</string>
+    <string name="guide_h_s8_content">Persistent vomiting, severe dehydration, or confusion.</string>
+    <string name="guide_h_remember">Record all factors to find the cause. Seek help if symptoms worsen.</string>
+
+    <string name="guide_l_title">Hypoglycemia</string>
+    <string name="guide_l_desc">15-15 rule and emergency response for low glucose.</string>
+    <string name="guide_l_keywords">15-15 Rule · Prevention · SOS</string>
+    <string name="guide_l_intro">Low blood sugar is generally defined as glucose below 70 mg/dL.</string>
+    <string name="guide_l_s1_title">Early Symptoms</string>
+    <string name="guide_l_s1_content">Sudden hunger, sweating, shaking, heart palpitations, and anxiety.</string>
+    <string name="guide_l_s2_title">Severe Symptoms</string>
+    <string name="guide_l_s2_content">Confusion, slurred speech, blurred vision, or loss of consciousness.</string>
+    <string name="guide_l_s3_title">Common Causes</string>
+    <string name="guide_l_s3_content">Missed meals, too much insulin, extra exercise, or alcohol on an empty stomach.</string>
+    <string name="guide_l_s4_title">15-15 Rule</string>
+    <string name="guide_l_s4_content">Eat 15g fast carbs, wait 15 min, re-measure. Repeat if still below 70.</string>
+    <string name="guide_l_s5_title">Avoid These for Treatment</string>
+    <string name="guide_l_s5_content">Chocolate, ice cream (fat slows sugar absorption), and diet/zero sodas.</string>
+    <string name="guide_l_s6_title">If Unconscious</string>
+    <string name="guide_l_s6_content">Do not give food. Call emergency services immediately.</string>
+    <string name="guide_l_s7_title">Low While Driving</string>
+    <string name="guide_l_s7_content">Stop safely, treat immediately. Don\'t drive until glucose is stable.</string>
+    <string name="guide_l_s8_title">Exercise Lows</string>
+    <string name="guide_l_s8_content">Can happen hours after workout. Consult your doctor about adjusting meds.</string>
+    <string name="guide_l_s9_title">Prevention</string>
+    <string name="guide_l_s9_content">Don\'t skip meals, carry sugar, and inform family about your symptoms.</string>
+    <string name="guide_l_remember">Low glucose is an emergency. Act fast, don\'t wait.</string>
+    <string name="guide_l_doctor">Consult if lows repeat weekly or during sleep.</string>
+
+    <string name="guide_f_title">Food Guide</string>
+    <string name="guide_f_desc">Balanced plate, eating order, and smart snack choices.</string>
+    <string name="guide_f_keywords">Diet · Carbs · GI Index</string>
+    <string name="guide_f_intro">Healthy eating is about balance, portions, and consistency.</string>
+    <string name="guide_f_s1_title">Glucose &amp; Carbs</string>
+    <string name="guide_f_s1_content">Carbs impact glucose most. Choose fiber-rich whole grains over refined carbs.</string>
+    <string name="guide_f_s2_title">The Plate Model</string>
+    <string name="guide_f_s2_content">1/2 Veggies, 1/4 Protein, 1/4 Whole Grains.</string>
+    <string name="guide_f_s3_title">Eating Order</string>
+    <string name="guide_f_s3_content">Fiber first, then protein, then carbs to slow sugar absorption.</string>
+    <string name="guide_f_s4_title">Recommended Foods</string>
+    <string name="guide_f_s4_content">Broccoli, fish, tofu, nuts, and whole grains.</string>
+    <string name="guide_f_s5_title">Reduce These Foods</string>
+    <string name="guide_f_s5_content">Sugary drinks, white bread, processed meats, and excessive alcohol.</string>
+    <string name="guide_f_s11_title">Meal Records</string>
+    <string name="guide_f_s11_content">Track time, food, and portions to find your perfect diet.</string>
+    <string name="guide_f_remember">Even healthy food can raise glucose if eaten in excess.</string>
+
+    <string name="guide_label_remember">Remember</string>
+    <string name="guide_source_full">Ref: ADA, ADA 2026.</string>
+
+    <string name="guide_target_title">Glucose Targets</string>
+    <string name="guide_target_subtitle">Targets vary per individual.</string>
+    <string name="guide_target_item1">HbA1c: below 6.5%</string>
+    <string name="guide_target_item2">Fasting: 70 ~ 130 mg/dL</string>
+    <string name="guide_target_item3">2h Post-meal: below 180 mg/dL</string>
+    <string name="guide_target_info">Manage your 3-month average glucose indicator.</string>
+</resources>

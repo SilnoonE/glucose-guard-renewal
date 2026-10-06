@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/guide_food"
+                android:textColor="@color/primary"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <!-- Intro Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/primary_light"
+                app:cardBackgroundColor="@color/white">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/guide_f_intro"
+                    android:textColor="@color/text_main"
+                    android:textSize="16sp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/guide_f_s1_title"
+                android:textColor="@color/text_main"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="7sp"
+                android:text="@string/guide_f_s1_content"
+                android:textColor="@color/text_sub"
+                android:textSize="15sp" />
+
+            <!-- Section 2 - Plate Model Summary -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:cardBackgroundColor="#E8F5E9"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_f_s2_title"
+                        android:textColor="@color/primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="7sp"
+                        android:text="@string/guide_f_s2_content"
+                        android:textColor="#1B5E20"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section 3 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/guide_f_s3_title"
+                android:textColor="@color/text_main"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="7sp"
+                android:text="@string/guide_f_s3_content"
+                android:textColor="@color/text_sub"
+                android:textSize="15sp" />
+
+            <!-- Food Rules List -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/guide_food_rules_title"
+                android:textColor="@color/text_main"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/guide_f_s6_title"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/primary" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/guide_f_s6_content"
+                    android:textColor="@color/text_sub"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="6sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/guide_f_s7_title"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/primary" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/guide_f_s7_content"
+                    android:textColor="@color/text_sub"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="6sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/guide_f_s8_title"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/primary" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/guide_f_s8_content"
+                    android:textColor="@color/text_sub"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="6sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/guide_f_s9_title"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/primary" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/guide_f_s9_content"
+                    android:textColor="@color/text_sub"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="6sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/guide_f_s10_title"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/primary" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/guide_f_s10_content"
+                    android:textColor="@color/text_sub"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="6sp" />
+            </LinearLayout>
+
+            <!-- Remember Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                app:cardBackgroundColor="@color/primary_light"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_label_remember"
+                        android:textColor="@color/primary"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="6sp"
+                        android:text="@string/guide_f_remember"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Citation -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:layout_marginBottom="80dp"
+                android:gravity="center"
+                android:text="@string/guide_source_full"
+                android:textColor="@color/text_sub"
+                android:textSize="11sp"
+                android:lineSpacingExtra="5dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

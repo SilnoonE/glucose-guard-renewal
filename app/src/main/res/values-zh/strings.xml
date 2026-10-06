@@ -1,0 +1,264 @@
+<resources>
+    <string name="app_name">血糖助手 - 糖尿病管理、血糖记录</string>
+    <string name="nav_home">首页</string>
+    <string name="nav_record">记录</string>
+    <string name="nav_chart">图表</string>
+    <string name="nav_settings">设置</string>
+    <string name="today_summary">今日健康摘要</string>
+    <string name="avg_glucose">平均血糖</string>
+    <string name="total_insulin">胰岛素总量</string>
+    <string name="quick_record">快速记录</string>
+    <string name="glucose">血糖记录</string>
+    <string name="insulin">胰岛素记录</string>
+    <string name="meal">饮食/备注</string>
+    <string name="recent_records">最近健康记录</string>
+    <string name="unit_mgdl">mg/dL</string>
+    <string name="unit_dosage">单位</string>
+    <string name="medical_disclaimer">本应用仅供参考。准确诊断请咨询专业医生。</string>
+    <string name="report_ad_disclaimer">(리포트 저장 시 광고가 표시될 수 있습니다)</string>
+    <string name="splash_warm_message">今天也为您健康加油</string>
+
+    <!-- Settings -->
+    <string name="settings_title">设置与信息</string>
+    <string name="health_calculator">身体指数健康计算器</string>
+    <string name="health_calculator_desc">查看 BMI、标准体重和基础代谢率</string>
+    <string name="notif_scheduler">智能提醒调度器</string>
+    <string name="notif_scheduler_desc_on">提醒您饭前饭后记录 (收起)</string>
+    <string name="notif_scheduler_desc_off">提醒您饭前饭后记录 (展开)</string>
+    <string name="notif_morning">早晨提醒</string>
+    <string name="notif_lunch">午间提醒</string>
+    <string name="notif_dinner">晚间提醒</string>
+    <string name="data_management">数据管理</string>
+    <string name="pdf_report_title">生成 PDF 健康报告</string>
+    <string name="pdf_report_desc">将血糖和胰岛素记录整理为包含图表和摘要分析的 PDF。</string>
+    <string name="btn_create_report">生成报告</string>
+    <string name="btn_export_data">导出数据</string>
+    <string name="btn_import_data">导入数据 (备份文件)</string>
+    <string name="btn_clear_data">重置所有数据</string>
+    <string name="app_settings">应用设置</string>
+    <string name="profile_image_setting">设置个人头像</string>
+    <string name="language_setting">语言设置 (Language Setting)</string>
+    <string name="health_guide">健康百科全书</string>
+    <string name="guide_manage">血糖管理技巧</string>
+    <string name="guide_target">血糖目标参考表</string>
+    <string name="guide_high">高血糖应对指南</string>
+    <string name="guide_low">低血糖急救指南</string>
+    <string name="guide_food">饮食控制指南</string>
+
+    <!-- PDF Report Strings -->
+    <string name="pdf_header_title">血糖助手 健康报告</string>
+    <string name="pdf_period">分析周期</string>
+    <string name="pdf_footer_disclaimer">本报告仅供参考，不能替代医学诊断。</string>
+    <string name="pdf_gen_date">报告生成日期</string>
+    <string name="pdf_glucose_summary">血糖摘要</string>
+    <string name="pdf_insulin_summary">胰岛素摘要</string>
+    <string name="pdf_max_glucose">最高血糖</string>
+    <string name="pdf_min_glucose">最低血糖</string>
+    <string name="pdf_normal_range">正常范围</string>
+    <string name="pdf_total_dosage">总注射量</string>
+    <string name="pdf_avg_dosage">平均注射量</string>
+    <string name="pdf_dosage_count">注射次数</string>
+    <string name="pdf_overall_status">综合状态</string>
+    <string name="pdf_daily_trend">每日血糖平均趋势</string>
+    <string name="pdf_weekly_trend">每周血糖平均趋势</string>
+    <string name="pdf_monthly_trend">每月血糖平均趋势</string>
+    <string name="pdf_detail_analysis">详细时间段 analysis (最近一天)</string>
+    <string name="pdf_ai_analysis">AI 健康分析摘要</string>
+    <string name="pdf_memo_summary">主要备注摘要</string>
+    <string name="pdf_all_records">所有详细记录</string>
+    <string name="pdf_col_time">时间</string>
+    <string name="pdf_col_glucose">血糖</string>
+    <string name="pdf_col_status">状态</string>
+    <string name="pdf_col_insulin">胰岛素</string>
+    <string name="pdf_col_memo">备注</string>
+    <string name="pdf_no_records">暂无记录数据。</string>
+
+    <!-- Categories & Periods -->
+    <string name="cat_fasting">空腹</string>
+    <string name="cat_before_meal">饭前</string>
+    <string name="cat_after_meal">饭后</string>
+    <string name="cat_before_bed">睡前</string>
+    <string name="cat_other">其他</string>
+
+    <string name="msg_today_status">当前状态</string>
+    <string name="msg_no_data">数据不足</string>
+    <string name="msg_hello">您好，祝您拥有健康的一天！</string>
+    <string name="msg_no_data_desc">今天还没有血糖记录。</string>
+    <string name="msg_no_data_insight">为了进行准确分析，请先测量并记录血糖。</string>
+    <string name="msg_low_desc">平均血糖低于目标值。</string>
+    <string name="msg_low_insight">存在低血糖风险。</string>
+    <string name="msg_high_desc">管理水平高于目标范围。</string>
+    <string name="msg_high_insight">整体血糖偏高。</string>
+    <string name="msg_high_after_meal_insight">餐后血糖显著偏高。</string>
+    <string name="msg_normal_desc">完美保持在目标范围内。</string>
+    <string name="msg_normal_insight">出色的管理！</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">健康记录提醒</string>
+    <string name="notif_morning_title">早晨提醒</string>
+    <string name="notif_morning_content">测量空腹血糖了吗？</string>
+    <string name="notif_lunch_title">午间提醒</string>
+    <string name="notif_lunch_content">饭后记得记录血糖。</string>
+    <string name="notif_dinner_title">晚间提醒</string>
+    <string name="notif_dinner_content">睡前检查一下血糖吧。</string>
+    <string name="notif_general_title">血糖助手提醒</string>
+    <string name="notif_general_content">现在是测量或记录血糖的时间。</string>
+
+    <!-- Input Screens -->
+    <string name="glucose_input_title">血糖记录</string>
+    <string name="glucose_hint">血糖数值 (mg/dL)</string>
+    <string name="date_time_label">日期与时间</string>
+    <string name="category_label">类别</string>
+    <string name="memo_hint">备注 (选填)</string>
+    <string name="btn_save">保存</string>
+    <string name="btn_edit">修改</string>
+    <string name="chip_fasting">空腹</string>
+    <string name="chip_breakfast_before">早餐前</string>
+    <string name="chip_breakfast_after">早餐后</string>
+    <string name="chip_lunch_before">午餐前</string>
+    <string name="chip_lunch_after">午餐后</string>
+    <string name="chip_dinner_before">晚餐前</string>
+    <string name="chip_dinner_after">晚餐后</string>
+    <string name="chip_sleep_before">睡前</string>
+
+    <string name="status_low">偏低</string>
+    <string name="status_high">偏高</string>
+    <string name="status_normal">正常</string>
+
+    <!-- Health Guide Main -->
+    <string name="guide_main_title">健康百科全书</string>
+    <string name="guide_main_subtitle">查看为您提供的核心健康管理建议。</string>
+    <string name="guide_tip_title">今日健康贴士</string>
+    <string name="guide_tip_content">比起单次数值，多天的趋势更重要。</string>
+    <string name="guide_read_time_fmt">%d 分钟阅读</string>
+    <string name="guide_disclaimer_title">使用说明</string>
+    <string name="guide_disclaimer_content">本指南仅供参考，不作为医疗建议。</string>
+
+    <!-- Full Guide Keys -->
+    <string name="guide_m_intro">血糖管理即是了解您的代谢健康状况。</string>
+    <string name="guide_m_s1_title">为何记录？</string>
+    <string name="guide_m_s1_content">记录可以帮助发现规律和饮食对身体的影响。</string>
+    <string name="guide_m_s2_title">何时测量？</string>
+    <string name="guide_m_s2_content">建议在空腹和餐后两小时进行测量。</string>
+    <string name="guide_m_s3_title">空腹与餐后</string>
+    <string name="guide_m_s3_content">两个指标对于代谢评估都非常重要。</string>
+    <string name="guide_m_s4_title">准确测量</string>
+    <string name="guide_m_s4_content">请确保双手清洁并检查试纸效期。</string>
+    <string name="guide_m_s5_title">影响因素</string>
+    <string name="guide_m_s5_content">饮食、运动和压力都会影响血糖水平。</string>
+    <string name="guide_m_s6_title">查看记录</string>
+    <string name="guide_m_s6_content">重点关注长期的血糖变化趋势。</string>
+    <string name="guide_m_remember">持之以恒的监测至关重要。</string>
+    <string name="guide_m_doctor">如数值持续偏高，请咨询医生。</string>
+
+    <string name="guide_e_title">运动建议</string>
+    <string name="guide_e_intro">运动有助于提高胰岛素敏感性。</string>
+    <string name="guide_e_s1_title">好处</string>
+    <string name="guide_e_s1_content">稳定血糖水平并帮助控制体重。</string>
+    <string name="guide_e_s2_title">步行</string>
+    <string name="guide_e_s2_content">餐后 30 分钟进行轻快步行非常有效。</string>
+    <string name="guide_e_s3_title">骑行</string>
+    <string name="guide_e_s3_content">低关节压力的有氧运动选择。</string>
+    <string name="guide_e_s4_title">游泳</string>
+    <string name="guide_e_s4_content">非常适合全身锻炼的有氧运动。</string>
+    <string name="guide_e_s5_title">力量训练</string>
+    <string name="guide_e_s5_content">通过维持肌肉量来促进基础代谢。</string>
+    <string name="guide_e_s6_title">拉伸</string>
+    <string name="guide_e_s6_content">保持关节灵活性并预防运动损伤。</string>
+    <string name="guide_e_s7_title">前检查</string>
+    <string name="guide_e_s7_content">运动前请先确认当前的身体状况。</string>
+    <string name="guide_e_s8_title">低血糖预防</string>
+    <string name="guide_e_s8_content">如感到手抖或出冷汗，请立即停止。</string>
+    <string name="guide_e_s9_title">何时停止</string>
+    <string name="guide_e_s9_content">身体不适时请勿强行坚持锻炼。</string>
+    <string name="guide_e_remember">循序渐进，贵在坚持。</string>
+
+    <string name="guide_h_intro">长期高血糖可能会损伤您的血管。</string>
+    <string name="guide_h_s1_title">主要症状</string>
+    <string name="guide_h_s1_content">需留意口渴、疲劳和尿频等信号。</string>
+    <string name="guide_h_s2_title">常见原因</string>
+    <string name="guide_h_s2_content">通常由于饮食不当或漏服药物引起。</string>
+    <string name="guide_h_s3_title">确认步骤</string>
+    <string name="guide_h_s3_content">请再次确保操作正确并重新测量。</string>
+    <string name="guide_h_s4_title">紧急应对</string>
+    <string name="guide_h_s4_content">多喝水并保持静养观察。</string>
+    <string name="guide_h_s5_title">禁忌事项</string>
+    <string name="guide_h_s5_content">切勿在未咨询医生的情况下增加药量。</string>
+    <string name="guide_h_s6_title">运动须知</string>
+    <string name="guide_h_s6_content">血糖过高时应避免剧烈运动。</string>
+    <string name="guide_h_s7_title">紧急征兆</string>
+    <string name="guide_h_s7_content">若出现神志不清请立即拨打急救。</string>
+    <string name="guide_h_s8_title">就医标准</string>
+    <string name="guide_h_s8_content">如果症状持续加重请即刻就医。</string>
+    <string name="guide_h_warning">高血糖具有损害血管的长期风险。</string>
+    <string name="guide_h_remember">了解波动的诱因是管理的第一步。</string>
+
+    <string name="guide_l_intro">低血糖情况需要得到迅速处理。</string>
+    <string name="guide_l_s1_title">初期症状</string>
+    <string name="guide_l_s1_content">包括手抖、饥饿感和出冷汗等。</string>
+    <string name="guide_l_s2_title">严重症状</string>
+    <string name="guide_l_s2_content">可能导致意识模糊或神志不清。</string>
+    <string name="guide_l_s3_title">常见原因</string>
+    <string name="guide_l_s3_content">通常由空腹运动或用药过量引起。</string>
+    <string name="guide_l_s4_title">15-15 原则</string>
+    <string name="guide_l_s4_content">摄入 15g 糖分，等待 15 分钟再测。</string>
+    <string name="guide_l_s5_title">不宜食品</string>
+    <string name="guide_l_s5_content">巧克力等高脂食品吸收较慢。</string>
+    <string name="guide_l_s6_title">紧急急救</string>
+    <string name="guide_l_s6_content">无意识时切勿喂食，立即送医。</string>
+    <string name="guide_l_s7_title">驾驶提示</string>
+    <string name="guide_l_s7_content">如有不适应立即靠边停车处理。</string>
+    <string name="guide_l_s8_title">运动后</string>
+    <string name="guide_l_s8_content">运动后数小时仍需警惕低血糖。</string>
+    <string name="guide_l_s9_title">预防方法</string>
+    <string name="guide_l_s9_content">随身携带糖块等备用糖分。</string>
+    <string name="guide_l_doctor">频繁发生时请务必咨询专业医生。</string>
+    <string name="guide_l_remember">迅速补充糖分，分秒必争。</string>
+
+    <string name="guide_f_intro">合理的平衡膳食是健康管理的核心。</string>
+    <string name="guide_f_s1_title">碳水管理</string>
+    <string name="guide_f_s1_content">推荐选择粗粮而非精制碳水化合物。</string>
+    <string name="guide_f_s2_title">健康餐盘</string>
+    <string name="guide_f_s2_content">蔬菜占一半，蛋白质与粗粮各 1/4。</string>
+    <string name="guide_f_s3_title">进餐顺序</string>
+    <string name="guide_f_s3_content">建议先吃蔬菜以减缓糖分吸收。</string>
+    <string name="guide_f_s4_title">推荐食物</string>
+    <string name="guide_f_s4_content">包括鱼类、豆腐和深色蔬菜等。</string>
+    <string name="guide_f_s5_title">少食类</string>
+    <string name="guide_f_s5_content">请减少含糖饮料和高糖甜点的摄入。</string>
+    <string name="guide_f_s6_title">水果技巧</string>
+    <string name="guide_f_s6_content">食用适量新鲜水果优于饮用果汁。</string>
+    <string name="guide_f_s7_title">认识 GI 值</string>
+    <string name="guide_f_s7_content">了解不同食物引起血糖上升的速度。</string>
+    <string name="guide_f_s8_title">外餐技巧</string>
+    <string name="guide_f_s8_content">尽量选择清淡烹饪而非油炸食品。</string>
+    <string name="guide_f_s9_title">健康加餐</string>
+    <string name="guide_f_s9_content">坚果或无糖酸奶是很好的选择。</string>
+    <string name="guide_f_s10_title">饮水与酒</string>
+    <string name="guide_f_s10_content">切勿空腹饮酒，多喝纯净水。</string>
+    <string name="guide_f_s11_title">饮食记录</string>
+    <string name="guide_f_s11_content">通过记录了解饮食对血糖的影响。</string>
+    <string name="guide_f_remember">控制总量和比例是成功关键。</string>
+
+    <string name="guide_label_keywords">关键词</string>
+    <string name="guide_label_steps">应对</string>
+    <string name="guide_label_emergency">紧急信息</string>
+    <string name="guide_label_remember">关键点</string>
+    <string name="guide_label_doctor">就医咨询</string>
+    <string name="guide_label_source">数据来源</string>
+    <string name="guide_source_full">参考 KDA 与 ADA 糖尿病诊疗指南。</string>
+    <string name="guide_emergency_alert">紧急情况请立即前往医院。</string>
+
+    <string name="guide_m_keywords_full">测量 · 记录 · 趋势</string>
+    <string name="guide_e_keywords_full">有氧 · 力量 · 安全</string>
+    <string name="guide_h_keywords_full">症状 · 应对 · 紧急</string>
+    <string name="guide_l_keywords_full">15-15 原则 · 预防 · 急救</string>
+    <string name="guide_f_keywords_full">饮食 · 碳水 · GI</string>
+
+    <string name="guide_target_title">血糖目标</string>
+    <string name="guide_target_subtitle">请根据个人情况设定调控目标。</string>
+    <string name="guide_target_item1">糖化血红蛋白：建议 6.5% 以下</string>
+    <string name="guide_target_item2">空腹：70 ~ 130 mg/dL</string>
+    <string name="guide_target_item3">餐后：180 mg/dL 以下</string>
+    <string name="guide_target_info">重点关注 3 个月的平均血糖指标。</string>
+</resources>

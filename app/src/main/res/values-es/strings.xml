@@ -1,0 +1,256 @@
+<resources>
+    <string name="app_name">Control de Glucosa - Gestión de Diabetes</string>
+    <string name="nav_home">Inicio</string>
+    <string name="nav_record">Registro</string>
+    <string name="nav_chart">Gráfico</string>
+    <string name="nav_settings">Ajustes</string>
+    <string name="today_summary">Resumen de Salud de Hoy</string>
+    <string name="avg_glucose">Glucosa Promedio</string>
+    <string name="total_insulin">Insulina Total</string>
+    <string name="quick_record">Registro Rápido</string>
+    <string name="glucose">Registro de Glucosa</string>
+    <string name="insulin">Registro de Insulina</string>
+    <string name="meal">Comida/Nota</string>
+    <string name="recent_records">Registros de Salud Recientes</string>
+    <string name="unit_mgdl">mg/dL</string>
+    <string name="unit_dosage">Unidad</string>
+    <string name="medical_disclaimer">Esta aplicación es solo para referencia. Consulte a un especialista para un diagnóstico preciso.</string>
+    <string name="report_ad_disclaimer">(Pueden aparecer anuncios al guardar informes)</string>
+    <string name="splash_warm_message">Apoyando su salud hoy</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Ajustes e Información</string>
+    <string name="health_calculator">Calculadora de Salud Corporal</string>
+    <string name="health_calculator_desc">Calcule IMC, peso ideal y TMB</string>
+    <string name="notif_scheduler">Programador de Notificaciones</string>
+    <string name="notif_scheduler_desc_on">Recordatorios antes/después de comer (Contraer)</string>
+    <string name="notif_scheduler_desc_off">Recordatorios antes/después de comer (Expandir)</string>
+    <string name="notif_morning">Notificación Mañana</string>
+    <string name="notif_lunch">Notificación Almuerzo</string>
+    <string name="notif_dinner">Notificación Cena</string>
+    <string name="data_management">Gestión de Datos</string>
+    <string name="pdf_report_title">Generar Informe de Salud PDF</string>
+    <string name="pdf_report_desc">Guarda registros de glucosa/insulina como PDF con gráficos y análisis.</string>
+    <string name="btn_create_report">Crear Informe</string>
+    <string name="btn_export_data">Exportar Datos</string>
+    <string name="btn_import_data">Importar Datos (Copia de seguridad)</string>
+    <string name="btn_clear_data">Restablecer Todos los Datos</string>
+    <string name="app_settings">Ajustes de la App</string>
+    <string name="profile_image_setting">Definir Imagen de Perfil</string>
+    <string name="language_setting">Ajuste de Idioma (Language Setting)</string>
+    <string name="health_guide">Enciclopedia de Salud</string>
+    <string name="guide_manage">Gestión de Glucosa</string>
+    <string name="guide_target">Tabla de Objetivos de Glucosa</string>
+    <string name="guide_high">Respuesta a la Hiperglucemia</string>
+    <string name="guide_low">Guía de Emergencia Hipoglucemia</string>
+    <string name="guide_food">Guía de Control de Dieta</string>
+
+    <!-- PDF Report Strings -->
+    <string name="pdf_header_title">Informe de Salud de Glucosa</string>
+    <string name="pdf_period">Periodo de Análisis</string>
+    <string name="pdf_footer_disclaimer">Este informe es solo para referencia y no sustituye un diagnóstico médico.</string>
+    <string name="pdf_gen_date">Fecha de Gen. del Informe</string>
+    <string name="pdf_glucose_summary">Resumen de Glucosa</string>
+    <string name="pdf_insulin_summary">Resumen de Insulina</string>
+    <string name="pdf_max_glucose">Glucosa Máxima</string>
+    <string name="pdf_min_glucose">Glucosa Mínima</string>
+    <string name="pdf_normal_range">Rango Normal</string>
+    <string name="pdf_total_dosage">Dosis Total</string>
+    <string name="pdf_avg_dosage">Dosis Promedio</string>
+    <string name="pdf_dosage_count">Conteo de Dosis</string>
+    <string name="pdf_overall_status">Estado General</string>
+    <string name="pdf_daily_trend">Tendencia Diaria de Glucosa</string>
+    <string name="pdf_weekly_trend">Tendencia Semanal de Glucosa</string>
+    <string name="pdf_monthly_trend">Tendencia Mensual de Glucosa</string>
+    <string name="pdf_detail_analysis">Análisis de Tiempo Detallado (Día Reciente)</string>
+    <string name="pdf_ai_analysis">Resumen de Análisis de Salud IA</string>
+    <string name="pdf_memo_summary">Resumen de Notas Clave</string>
+    <string name="pdf_all_records">Todos los Registros Detallados</string>
+    <string name="pdf_col_time">Hora</string>
+    <string name="pdf_col_glucose">Glucosa</string>
+    <string name="pdf_col_status">Estado</string>
+    <string name="pdf_col_insulin">Insulina</string>
+    <string name="pdf_col_memo">Nota</string>
+    <string name="pdf_no_records">No hay datos registrados.</string>
+
+    <!-- Categories & Periods -->
+    <string name="cat_fasting">Ayunas</string>
+    <string name="cat_before_meal">Antes de Comer</string>
+    <string name="cat_after_meal">Después de Comer</string>
+    <string name="cat_before_bed">Antes de Dormir</string>
+    <string name="cat_other">Otro</string>
+
+    <string name="msg_today_status">Estado Actual</string>
+    <string name="msg_no_data">Datos Insuficientes</string>
+    <string name="msg_hello">¡Hola! ¡Tenga un día saludable!</string>
+    <string name="msg_no_data_desc">Aún no hay registros de glucosa para hoy.</string>
+    <string name="msg_no_data_insight">Mida y registre su glucosa para un análisis preciso.</string>
+    <string name="msg_low_desc">La glucosa promedio es inferior al objetivo.</string>
+    <string name="msg_low_insight">Riesgo de hipoglucemia.</string>
+    <string name="msg_high_desc">Gestionando por encima del rango objetivo.</string>
+    <string name="msg_high_insight">La glucosa general es alta.</string>
+    <string name="msg_high_after_meal_insight">La glucosa post-comida es alta.</string>
+    <string name="msg_normal_desc">Manteniendo perfectamente dentro del rango objetivo.</string>
+    <string name="msg_normal_insight">¡Excelente gestión!</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">Recordatorios de Salud</string>
+    <string name="notif_morning_title">¡Buen día!</string>
+    <string name="notif_morning_content">¿Midió su glucosa en ayunas?</string>
+    <string name="notif_lunch_title">¡Buen almuerzo!</string>
+    <string name="notif_lunch_content">No olvide registrar su glucosa.</string>
+    <string name="notif_dinner_title">¡Buena noche!</string>
+    <string name="notif_dinner_content">Revise su glucosa antes de dormir.</string>
+    <string name="notif_general_title">Recordatorio de Control de Glucosa</string>
+    <string name="notif_general_content">Es hora de medir o registrar su glucosa.</string>
+
+    <!-- Input Screens -->
+    <string name="glucose_input_title">Registro de Glucosa</string>
+    <string name="glucose_hint">Nivel de Glucosa (mg/dL)</string>
+    <string name="date_time_label">Fecha y Hora</string>
+    <string name="category_label">Categoría</string>
+    <string name="memo_hint">Nota (Opcional)</string>
+    <string name="btn_save">Guardar</string>
+    <string name="btn_edit">Actualizar</string>
+    <string name="chip_fasting">Ayunas</string>
+    <string name="chip_breakfast_before">Antes Desayuno</string>
+    <string name="chip_breakfast_after">Después Desayuno</string>
+    <string name="chip_lunch_before">Antes Almuerzo</string>
+    <string name="chip_lunch_after">Después Almuerzo</string>
+    <string name="chip_dinner_before">Antes Cena</string>
+    <string name="chip_dinner_after">Después Cena</string>
+    <string name="chip_sleep_before">Antes Dormir</string>
+
+    <string name="status_low">Bajo</string>
+    <string name="status_high">Alto</string>
+    <string name="status_normal">Normal</string>
+
+    <!-- Health Guide Main -->
+    <string name="guide_main_title">Enciclopedia de Salud</string>
+    <string name="guide_main_subtitle">Consejos esenciales de gestión para su día a día.</string>
+    <string name="guide_tip_title">Consejo de Hoy</string>
+    <string name="guide_tip_content">Es más importante mirar las tendencias que un solo número.</string>
+    <string name="guide_read_time_fmt">%d min de lectura</string>
+    <string name="guide_disclaimer_title">Información de Uso</string>
+    <string name="guide_disclaimer_content">Esta guía es solo informativa. Consulte siempre a un médico.</string>
+
+    <!-- Full Guide Keys -->
+    <string name="guide_m_intro">Gestionar la glucosa es entender su salud metabólica.</string>
+    <string name="guide_m_s1_title">¿Por qué registrar?</string>
+    <string name="guide_m_s1_content">Para identificar patrones y el efecto de los alimentos.</string>
+    <string name="guide_m_s2_title">¿Cuándo medir?</string>
+    <string name="guide_m_s2_content">Mida en ayunas y dos horas después de comer.</string>
+    <string name="guide_m_s3_title">Ayunas vs Post-comida</string>
+    <string name="guide_m_s3_content">Ambos indicadores son vitales para el seguimiento.</string>
+    <string name="guide_m_s4_title">Exactitud</string>
+    <string name="guide_m_s4_content">Use manos limpias y tiras reactivas vigentes.</string>
+    <string name="guide_m_s5_title">Fluctuaciones</string>
+    <string name="guide_m_s5_content">Dieta, estrés y ejercicio afectan sus niveles.</string>
+    <string name="guide_m_s6_title">Revisar registros</string>
+    <string name="guide_m_s6_content">Busque tendencias a largo plazo en su historial.</string>
+    <string name="guide_m_remember">La constancia es la base del éxito.</string>
+    <string name="guide_m_doctor">Consulte si sus niveles son consistentemente altos.</string>
+
+    <string name="guide_e_title">Consejos de Ejercicio</string>
+    <string name="guide_e_intro">El ejercicio mejora la sensibilidad a la insulina.</string>
+    <string name="guide_e_s1_title">Beneficios</string>
+    <string name="guide_e_s1_content">Ayuda a estabilizar la glucosa y controlar el peso.</string>
+    <string name="guide_e_s2_title">Caminata</string>
+    <string name="guide_e_s2_content">Caminar 30 min después de comer es muy efectivo.</string>
+    <string name="guide_e_s3_title">Ciclismo</string>
+    <string name="guide_e_s3_content">Ideal para reducir el impacto en las articulaciones.</string>
+    <string name="guide_e_s4_title">Natación</string>
+    <string name="guide_e_s4_content">Un ejercicio aeróbico completo y seguro.</string>
+    <string name="guide_e_s5_title">Fuerza</string>
+    <string name="guide_e_s5_content">Mantenga su masa muscular para un mejor metabolismo.</string>
+    <string name="guide_e_s6_title">Estiramientos</string>
+    <string name="guide_e_s6_content">Mantenga la flexibilidad y evite lesiones.</string>
+    <string name="guide_e_s7_title">Pre-chequeo</string>
+    <string name="guide_e_s7_content">Verifique su estado físico antes de empezar.</string>
+    <string name="guide_e_s8_title">Bajas durante ejercicio</string>
+    <string name="guide_e_s8_content">Pare si siente mareo o sudor frío.</string>
+    <string name="guide_e_s9_title">Cuándo parar</string>
+    <string name="guide_e_s9_content">No se esfuerce si se siente mal de salud.</string>
+    <string name="guide_e_remember">La regularidad es mejor que la intensidad.</string>
+
+    <string name="guide_h_intro">La hiperglucemia prolongada puede dañar los vasos sanguíneos.</string>
+    <string name="guide_h_s1_title">Síntomas</string>
+    <string name="guide_h_s1_content">Esté atento a la sed excesiva y la fatiga.</string>
+    <string name="guide_h_s2_title">Causas</string>
+    <string name="guide_h_s2_content">Suele deberse a excesos en dieta o falta de medicación.</string>
+    <string name="guide_h_s3_title">Verificación</string>
+    <string name="guide_h_s3_content">Lave sus manos y vuelva a medir con cuidado.</string>
+    <string name="guide_h_s4_title">Acciones</string>
+    <string name="guide_h_s4_content">Hidrátese bien y mantenga reposo.</string>
+    <string name="guide_h_s5_title">Lo que no debe hacer</string>
+    <string name="guide_h_s5_content">No aumente su dosis de insulina sin permiso médico.</string>
+    <string name="guide_h_s6_title">Sobre el ejercicio</string>
+    <string name="guide_h_s6_content">Evite el ejercicio intenso si su glucosa es muy alta.</string>
+    <string name="guide_h_s7_title">Emergencia</string>
+    <string name="guide_h_s7_content">Confusión o vómitos requieren atención inmediata.</string>
+    <string name="guide_h_s8_title">Cuándo ir al médico</string>
+    <string name="guide_h_s8_content">Si los síntomas persisten o empeoran rápidamente.</string>
+    <string name="guide_h_warning">El azúcar alto daña el sistema circulatorio.</string>
+    <string name="guide_h_remember">Entender la causa es el primer paso para corregir.</string>
+
+    <string name="guide_l_intro">La hipoglucemia requiere una respuesta inmediata.</string>
+    <string name="guide_l_s1_title">Síntomas iniciales</string>
+    <string name="guide_l_s1_content">Temblores, hambre extrema y sudoración.</string>
+    <string name="guide_l_s2_title">Síntomas graves</string>
+    <string name="guide_l_s2_content">Puede causar desorientación o pérdida de conciencia.</string>
+    <string name="guide_l_s3_title">Causas comunes</string>
+    <string name="guide_l_s3_content">Ejercicio en ayunas o exceso de medicación.</string>
+    <string name="guide_l_s4_title">Regla 15-15</string>
+    <string name="guide_l_s4_content">15g de carbs, espere 15 min y vuelva a medir.</string>
+    <string name="guide_l_s5_title">No recomendado</string>
+    <string name="guide_l_s5_content">Chocolates o helados son de absorción lenta.</string>
+    <string name="guide_l_s6_title">Inconsciencia</string>
+    <string name="guide_l_s6_content">No dé comida por la boca; llame a emergencias.</string>
+    <string name="guide_l_s7_title">Conducción</string>
+    <string name="guide_l_s7_content">Detenga el vehículo y trate la baja de inmediato.</string>
+    <string name="guide_l_s8_title">Post-ejercicio</string>
+    <string name="guide_l_s8_content">Vigile su azúcar horas después de entrenar.</string>
+    <string name="guide_l_s9_title">Prevención</string>
+    <string name="guide_l_s9_content">Lleve siempre consigo una fuente de azúcar rápido.</string>
+    <string name="guide_l_doctor">Consulte si tiene bajas frecuentes.</string>
+    <string name="guide_l_remember">Actúe rápido, no espere a que pase solo.</string>
+
+    <string name="guide_f_intro">Una dieta equilibrada es la base de la salud.</string>
+    <string name="guide_f_s1_title">Carbohidratos</string>
+    <string name="guide_f_s1_content">Prefiera granos integrales en lugar de refinados.</string>
+    <string name="guide_f_s2_title">Modelo de Plato</string>
+    <string name="guide_f_s2_content">1/2 vegetales, 1/4 proteína, 1/4 granos.</string>
+    <string name="guide_f_s3_title">Orden de comida</string>
+    <string name="guide_f_s3_content">Coma primero la fibra para saciarse.</string>
+    <string name="guide_f_s4_title">Recomendados</string>
+    <string name="guide_f_s4_content">Pescado, tofu y vegetales de hoja verde.</string>
+    <string name="guide_f_s5_title">Evite</string>
+    <string name="guide_f_s5_content">Bebidas azucaradas y repostería industrial.</string>
+    <string name="guide_f_s6_title">Frutas</string>
+    <string name="guide_f_s6_content">Fruta fresca entera en porciones moderadas.</string>
+    <string name="guide_f_s11_title">Registro de comidas</string>
+    <string name="guide_f_s11_content">Anote lo que come para ver su reacción.</string>
+    <string name="guide_f_remember">El control de las porciones es lo más importante.</string>
+
+    <string name="guide_label_keywords">Keywords</string>
+    <string name="guide_label_steps">Acción</string>
+    <string name="guide_label_emergency">Emergencia</string>
+    <string name="guide_label_remember">Recordar</string>
+    <string name="guide_label_doctor">Consultar Médico</string>
+    <string name="guide_label_source">Fuente</string>
+    <string name="guide_source_full">Referencia: Guías ADA y KDA.</string>
+    <string name="guide_emergency_alert">En emergencia, acuda al hospital.</string>
+
+    <string name="guide_m_keywords_full">Medir · Registrar · Tendencia</string>
+    <string name="guide_e_keywords_full">Aeróbico · Fuerza · Seguridad</string>
+    <string name="guide_h_keywords_full">Síntoma · Respuesta · Alerta</string>
+    <string name="guide_l_keywords_full">Regla 15-15 · SOS · Control</string>
+    <string name="guide_f_keywords_full">Dieta · Carbs · GI</string>
+
+    <string name="guide_target_title">Metas de Glucosa</string>
+    <string name="guide_target_subtitle">Las metas son individuales para cada persona.</string>
+    <string name="guide_target_item1">HbA1c: bajo 6.5% recomendado</string>
+    <string name="guide_target_item2">Ayunas: 70 ~ 130 mg/dL</string>
+    <string name="guide_target_item3">Post-comida: bajo 180 mg/dL</string>
+    <string name="guide_target_info">Gestione su promedio de los últimos 3 meses.</string>
+</resources>

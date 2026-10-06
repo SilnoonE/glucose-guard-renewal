@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.glucoseguard.ui.home.HomeFragment"
+        android:label="@string/nav_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_glucoseInput"
+            app:destination="@id/glucoseInputFragment" />
+        <action
+            android:id="@+id/action_home_to_insulinInput"
+            app:destination="@id/insulinInputFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_record"
+        android:name="com.example.glucoseguard.ui.record.RecordFragment"
+        android:label="@string/nav_record"
+        tools:layout="@layout/fragment_record">
+        <action
+            android:id="@+id/action_navigation_record_to_glucoseInputFragment"
+            app:destination="@id/glucoseInputFragment" />
+        <action
+            android:id="@+id/action_navigation_record_to_insulinInputFragment"
+            app:destination="@id/insulinInputFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_chart"
+        android:name="com.example.glucoseguard.ui.chart.ChartFragment"
+        android:label="@string/nav_chart"
+        tools:layout="@layout/fragment_chart" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.glucoseguard.ui.settings.SettingsFragment"
+        android:label="@string/nav_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_navigation_settings_to_healthGuideFragment"
+            app:destination="@id/healthGuideFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_to_healthCalculatorFragment"
+            app:destination="@id/healthCalculatorFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_to_guideManageFragment"
+            app:destination="@id/guideManageFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_to_guideTargetFragment"
+            app:destination="@id/guideTargetFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_to_guideHighFragment"
+            app:destination="@id/guideHighFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_to_guideLowFragment"
+            app:destination="@id/guideLowFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_to_guideFoodFragment"
+            app:destination="@id/guideFoodFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/healthGuideFragment"
+        android:name="com.example.glucoseguard.ui.settings.HealthGuideFragment"
+        android:label="@string/guide_main_title"
+        tools:layout="@layout/fragment_health_guide">
+        <action
+            android:id="@+id/action_healthGuide_to_manage"
+            app:destination="@id/guideManageFragment" />
+        <action
+            android:id="@+id/action_healthGuide_to_exercise"
+            app:destination="@id/guideExerciseFragment" />
+        <action
+            android:id="@+id/action_healthGuide_to_high"
+            app:destination="@id/guideHighFragment" />
+        <action
+            android:id="@+id/action_healthGuide_to_low"
+            app:destination="@id/guideLowFragment" />
+        <action
+            android:id="@+id/action_healthGuide_to_food"
+            app:destination="@id/guideFoodFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/glucoseInputFragment"
+        android:name="com.example.glucoseguard.ui.record.GlucoseInputFragment"
+        android:label="@string/glucose_input_title"
+        tools:layout="@layout/fragment_glucose_input">
+        <argument
+            android:name="recordId"
+            android:defaultValue="-1L"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/insulinInputFragment"
+        android:name="com.example.glucoseguard.ui.record.InsulinInputFragment"
+        android:label="@string/insulin"
+        tools:layout="@layout/fragment_insulin_input">
+        <argument
+            android:name="recordId"
+            android:defaultValue="-1L"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guideManageFragment"
+        android:name="com.example.glucoseguard.ui.settings.GuideManageFragment"
+        android:label="@string/guide_m_title"
+        tools:layout="@layout/fragment_guide_manage" />
+
+    <fragment
+        android:id="@+id/guideExerciseFragment"
+        android:name="com.example.glucoseguard.ui.settings.GuideExerciseFragment"
+        android:label="@string/guide_e_title"
+        tools:layout="@layout/fragment_guide_exercise" />
+
+    <fragment
+        android:id="@+id/guideHighFragment"
+        android:name="com.example.glucoseguard.ui.settings.GuideHighFragment"
+        android:label="@string/guide_h_title"
+        tools:layout="@layout/fragment_guide_high" />
+
+    <fragment
+        android:id="@+id/guideLowFragment"
+        android:name="com.example.glucoseguard.ui.settings.GuideLowFragment"
+        android:label="@string/guide_l_title"
+        tools:layout="@layout/fragment_guide_low" />
+
+    <fragment
+        android:id="@+id/guideFoodFragment"
+        android:name="com.example.glucoseguard.ui.settings.GuideFoodFragment"
+        android:label="@string/guide_f_title"
+        tools:layout="@layout/fragment_guide_food" />
+
+    <fragment
+        android:id="@+id/guideTargetFragment"
+        android:name="com.example.glucoseguard.ui.settings.GuideTargetFragment"
+        android:label="@string/guide_target_title"
+        tools:layout="@layout/fragment_guide_target" />
+
+    <fragment
+        android:id="@+id/healthCalculatorFragment"
+        android:name="com.example.glucoseguard.ui.settings.HealthCalculatorFragment"
+        android:label="@string/health_calculator"
+        tools:layout="@layout/fragment_health_calculator" />
+
+</navigation>

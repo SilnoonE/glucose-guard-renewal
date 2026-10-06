@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. Force Light Mode colors even in Night mode folder -->
+    <style name="Base.Theme.Tenthapp" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="android:windowBackground">@color/bg_light</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="colorSurface">@color/card_bg</item>
+        <item name="android:textColorPrimary">@color/text_main</item>
+        <item name="android:textColorSecondary">@color/text_sub</item>
+
+        <item name="android:colorBackground">@color/bg_light</item>
+        <item name="colorOnSurface">@color/text_main</item>
+    </style>
+</resources>

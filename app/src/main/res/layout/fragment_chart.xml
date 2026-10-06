@@ -20,12 +20,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="혈당 분석 리포트"
+                android:text="기록으로 보는 변화"
                 android:textColor="@color/text_main"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
-            <com.google.android.material.tabs.TabLayout
+            <TextView  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/chart_reference_note" android:textSize="13sp" android:textColor="@color/text_sub" android:layout_marginTop="8dp"/><com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab_layout_filter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="4dp"
+                app:cardElevation="0dp"
                 app:strokeColor="@color/border_color"
                 app:strokeWidth="1.5dp">
 
@@ -79,7 +79,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
-                            android:text="📈 혈당 변화 추이"
+                            android:text="혈당 변화 추이"
                             android:textColor="@color/text_main"
                             android:textStyle="bold" />
 
@@ -161,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="4dp"
+                app:cardElevation="0dp"
                 app:strokeColor="@color/border_color"
                 app:strokeWidth="1.5dp">
 
@@ -175,7 +175,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="16dp"
-                        android:text="📅 하루 상세 차트"
+                        android:text="하루 상세 차트"
                         android:textColor="@color/text_main"
                         android:textStyle="bold" />
 
@@ -230,7 +230,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="4dp"
+                app:cardElevation="0dp"
                 app:strokeColor="@color/border_color"
                 app:strokeWidth="1.5dp">
 

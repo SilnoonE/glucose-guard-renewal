@@ -1,17 +1,55 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. Force Light Mode colors even in Night mode folder -->
+    <!-- Base application theme. Force Light Mode colors everywhere -->
     <style name="Base.Theme.Tenthapp" parent="Theme.Material3.Light.NoActionBar">
+        <!-- 기본 색상 고정 -->
         <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
         <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+
+        <!-- Material3 필수 색상 고정 (BottomNavigationView 오류 방지) -->
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">@color/text_main</item>
+        <item name="colorSurfaceVariant">@color/bg_light</item>
+        <item name="colorOnSurfaceVariant">@color/text_sub</item>
+        <item name="colorSecondaryContainer">@color/primary_light</item>
+        <item name="colorOnSecondaryContainer">@color/primary</item>
+        <item name="colorOutline">@color/border_color</item>
+
         <item name="android:windowBackground">@color/bg_light</item>
-        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:statusBarColor">#FFFFFF</item>
         <item name="android:windowLightStatusBar">true</item>
 
-        <item name="colorSurface">@color/card_bg</item>
-        <item name="android:textColorPrimary">@color/text_main</item>
-        <item name="android:textColorSecondary">@color/text_sub</item>
-
-        <item name="android:colorBackground">@color/bg_light</item>
-        <item name="colorOnSurface">@color/text_main</item>
+        <item name="toolbarStyle">@style/Widget.App.Toolbar</item>
+        <item name="materialButtonStyle">@style/RoundedButton</item>
     </style>
-</resources>
+
+    <style name="Widget.App.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="navigationIconTint">@color/text_main</item>
+        <item name="titleTextColor">@color/text_main</item>
+    </style>
+
+    <style name="Theme.Tenthapp" parent="Base.Theme.Tenthapp" />
+
+    <style name="AppToolbarTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="RoundedButton" parent="Widget.Material3.Button">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="android:padding">12dp</item>
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="CategoryChip" parent="Widget.Material3.Chip.Suggestion">
+        <item name="android:textColor">@color/text_main</item>
+        <item name="android:backgroundTint">#FFFFFF</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.SmallComponent</item>
+    </style>
+<style name="Widget.App.NavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator"><item name="android:color">@color/primary_light</item></style></resources>

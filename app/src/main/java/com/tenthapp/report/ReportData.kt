@@ -15,7 +15,8 @@ data class ReportData(
     val dailyGlucoseEntries: List<ChartEntry> = emptyList(),
     val weeklyGlucoseEntries: List<ChartEntry> = emptyList(),
     val monthlyGlucoseEntries: List<ChartEntry> = emptyList(),
-    val hourlyGlucoseEntries: List<ChartEntry> = emptyList()
+    val hourlyGlucoseEntries: List<ChartEntry> = emptyList(),
+    val mealRecords: List<com.example.glucoseguard.data.model.MealRecord> = emptyList()
 )
 
 data class ChartEntry(

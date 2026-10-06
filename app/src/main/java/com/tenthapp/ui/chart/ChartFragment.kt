@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import com.github.mikephil.charting.charts.BarLineChartBase
 import com.github.mikephil.charting.charts.CombinedChart
 import com.github.mikephil.charting.charts.LineChart
@@ -31,14 +31,14 @@ class ChartFragment : Fragment() {
     private var _binding: FragmentChartBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: DiabetesViewModel by viewModels {
+    private val viewModel: DiabetesViewModel by activityViewModels {
         DiabetesViewModelFactory((requireActivity().application as DiabetesApplication).repository)
     }
 
     private var currentFilterPosition = 0 // 0: 일별, 1: 주별, 2: 월별
     private var selectedDetailDate = Calendar.getInstance()
-    private val TARGET_MIN = 70f
-    private val TARGET_MAX = 180f
+    private val TARGET_MIN get() = com.example.glucoseguard.util.TargetPreferences.read(requireContext()).min.toFloat()
+    private val TARGET_MAX get() = com.example.glucoseguard.util.TargetPreferences.read(requireContext()).afterMax.toFloat()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentChartBinding.inflate(inflater, container, false)
@@ -240,7 +240,7 @@ class ChartFragment : Fragment() {
             val dayOffset = ((time - firstTime) / 86400000L).toFloat()
             val avg = grouped[time]!!.map { it.value }.average().toFloat()
             allEntries.add(Entry(dayOffset, avg))
-            allColors.add(getGlucoseColor(avg.toInt(), TARGET_MIN, TARGET_MAX))
+            allColors.add(Color.parseColor("#087F78"))
         }
 
         setupGlucoseChartInternal(binding.fullLineChart, allEntries, emptyList(), allColors, 0, firstTime, true)
@@ -267,7 +267,7 @@ class ChartFragment : Fragment() {
         val grouped = records.groupBy {
             val c = Calendar.getInstance()
             c.timeInMillis = it.timestamp
-            c.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY)
+            c.add(Calendar.DAY_OF_YEAR, -((c.get(Calendar.DAY_OF_WEEK) + 5) % 7))
             c.set(Calendar.HOUR_OF_DAY, 0); c.set(Calendar.MINUTE, 0); c.set(Calendar.SECOND, 0); c.set(Calendar.MILLISECOND, 0)
             c.timeInMillis
         }
@@ -280,7 +280,7 @@ class ChartFragment : Fragment() {
             entries.add(Entry(index.toFloat(), avg))
             val c = Calendar.getInstance(); c.timeInMillis = time
             labels.add("${c.get(Calendar.MONTH) + 1}월 ${c.get(Calendar.WEEK_OF_MONTH)}주")
-            colors.add(getGlucoseColor(avg.toInt(), TARGET_MIN, TARGET_MAX))
+            colors.add(Color.parseColor("#087F78"))
         }
         setupGlucoseChartInternal(binding.lineChart, entries, labels, colors, 1, 0L, false)
         setupGlucoseChartInternal(binding.fullLineChart, entries, labels, colors, 1, 0L, true)
@@ -303,7 +303,7 @@ class ChartFragment : Fragment() {
             val avg = grouped[time]!!.map { it.value }.average().toFloat()
             entries.add(Entry(index.toFloat(), avg))
             labels.add(SimpleDateFormat("yy/MM", Locale.getDefault()).format(Date(time)))
-            colors.add(getGlucoseColor(avg.toInt(), TARGET_MIN, TARGET_MAX))
+            colors.add(Color.parseColor("#087F78"))
         }
         setupGlucoseChartInternal(binding.lineChart, entries, labels, colors, 1, 0L, false)
         setupGlucoseChartInternal(binding.fullLineChart, entries, labels, colors, 1, 0L, true)
@@ -317,10 +317,10 @@ class ChartFragment : Fragment() {
             if (entries.isEmpty() && !(mode == 0 && !isFull) && !isFull) { clear(); return }
 
             val dataSet = LineDataSet(entries, "평균 혈당").apply {
-                lineWidth = 4f; circleRadius = 6f; color = Color.parseColor("#2E7D32")
-                if (colors.size == entries.size) setCircleColors(colors) else setCircleColor(Color.parseColor("#2E7D32"))
-                setDrawFilled(true); fillAlpha = 40; fillColor = Color.parseColor("#E8F5E9")
-                setDrawValues(false); highLightColor = Color.parseColor("#2E7D32")
+                lineWidth = 4f; circleRadius = 6f; color = Color.parseColor("#087F78")
+                if (colors.size == entries.size) setCircleColors(colors) else setCircleColor(Color.parseColor("#087F78"))
+                setDrawFilled(true); fillAlpha = 40; fillColor = Color.parseColor("#E3F3EF")
+                setDrawValues(false); highLightColor = Color.parseColor("#087F78")
                 setDrawHorizontalHighlightIndicator(false); setDrawVerticalHighlightIndicator(true)
             }
             
@@ -376,11 +376,14 @@ class ChartFragment : Fragment() {
             if (dailyRecords.isEmpty()) { clear(); return }
             
             val entries = dailyRecords.map { Entry((it.timestamp - startOfDay) / 3600000f, it.value.toFloat()) }
-            val colors = dailyRecords.map { getGlucoseColor(it.value, TARGET_MIN, TARGET_MAX) }
+            val colors = dailyRecords.map {
+                val status = com.example.glucoseguard.util.GlucosePolicy.classify(it.value, it.category, com.example.glucoseguard.util.TargetPreferences.read(requireContext()))
+                when(status) { com.example.glucoseguard.util.GlucosePolicy.Status.LOW -> Color.parseColor("#185FA0"); com.example.glucoseguard.util.GlucosePolicy.Status.BELOW_TARGET -> Color.parseColor("#9A640C"); com.example.glucoseguard.util.GlucosePolicy.Status.ABOVE_TARGET -> Color.parseColor("#B53D3B"); else -> Color.parseColor("#087F78") }
+            }
             val dataSet = LineDataSet(entries, "혈당 흐름").apply { 
-                lineWidth = 3f; circleRadius = 5f; mode = LineDataSet.Mode.CUBIC_BEZIER; color = Color.parseColor("#2E7D32")
-                setCircleColors(colors); setDrawFilled(true); fillAlpha = 30; fillColor = Color.parseColor("#E8F5E9")
-                setDrawValues(false); highLightColor = Color.parseColor("#2E7D32")
+                lineWidth = 3f; circleRadius = 5f; mode = LineDataSet.Mode.LINEAR; color = Color.parseColor("#087F78")
+                setCircleColors(colors); setDrawFilled(true); fillAlpha = 30; fillColor = Color.parseColor("#E3F3EF")
+                setDrawValues(false); highLightColor = Color.parseColor("#087F78")
             }
             
             data = LineData(dataSet)
@@ -405,14 +408,14 @@ class ChartFragment : Fragment() {
     private fun applyLimitLines(chart: LineChart) {
         chart.axisLeft.apply {
             removeAllLimitLines()
-            addLimitLine(LimitLine(TARGET_MAX, "상한 (180)").apply { lineWidth = 1.5f; lineColor = Color.parseColor("#E53935"); enableDashedLine(10f, 10f, 0f); labelPosition = LimitLine.LimitLabelPosition.RIGHT_TOP; textSize = 9f; textColor = Color.parseColor("#E53935") })
-            addLimitLine(LimitLine(TARGET_MIN, "하한 (70)").apply { lineWidth = 1.5f; lineColor = Color.parseColor("#1E88E5"); enableDashedLine(10f, 10f, 0f); labelPosition = LimitLine.LimitLabelPosition.RIGHT_BOTTOM; textSize = 9f; textColor = Color.parseColor("#1E88E5") })
+            addLimitLine(LimitLine(TARGET_MAX, "참고 상한 (${TARGET_MAX.toInt()})").apply { lineWidth = 1.5f; lineColor = Color.parseColor("#E53935"); enableDashedLine(10f, 10f, 0f); labelPosition = LimitLine.LimitLabelPosition.RIGHT_TOP; textSize = 9f; textColor = Color.parseColor("#E53935") })
+            addLimitLine(LimitLine(TARGET_MIN, "목표 하한 (${TARGET_MIN.toInt()})").apply { lineWidth = 1.5f; lineColor = Color.parseColor("#1E88E5"); enableDashedLine(10f, 10f, 0f); labelPosition = LimitLine.LimitLabelPosition.RIGHT_BOTTOM; textSize = 9f; textColor = Color.parseColor("#1E88E5") })
             setDrawLimitLinesBehindData(true)
         }
     }
 
     private fun getGlucoseColor(value: Int, min: Float, max: Float): Int {
-        return when { value < min -> Color.parseColor("#1E88E5"); value > max -> Color.parseColor("#E53935"); else -> Color.parseColor("#2E7D32") }
+        return when { value < min -> Color.parseColor("#1E88E5"); value > max -> Color.parseColor("#E53935"); else -> Color.parseColor("#087F78") }
     }
 
     private fun updateInsulinChart(records: List<InsulinRecord>) {
@@ -434,7 +437,7 @@ class ChartFragment : Fragment() {
         binding.insulinCombinedChart.apply {
             data = CombinedData().apply {
                 setData(BarData(BarDataSet(barEntries, "투여량").apply { color = Color.parseColor("#66BB6A"); setDrawValues(true) }).apply { barWidth = 0.4f })
-                setData(LineData(LineDataSet(lineEntries, "추세").apply { color = Color.parseColor("#2E7D32"); lineWidth = 2f; setDrawValues(false) }))
+                setData(LineData(LineDataSet(lineEntries, "추세").apply { color = Color.parseColor("#087F78"); lineWidth = 2f; setDrawValues(false) }))
             }
             marker = CustomMarkerView(requireContext(), R.layout.layout_chart_marker, labels, "U", 1, 0L)
             xAxis.apply { valueFormatter = object : ValueFormatter() { override fun getFormattedValue(value: Float) = if (value.toInt() in labels.indices) labels[value.toInt()] else "" }; axisMinimum = -0.5f; axisMaximum = (labels.size - 1) + 0.5f }

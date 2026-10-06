@@ -24,8 +24,8 @@ import java.util.*
 
 class PdfReportGenerator(private val context: Context) {
 
-    private val primaryColor = Color.parseColor("#2E7D32")
-    private val secondaryColor = Color.parseColor("#66BB6A")
+    private val primaryColor = Color.parseColor("#087F78")
+    private val secondaryColor = Color.parseColor("#487F99")
     private val textMainColor = Color.parseColor("#1A1C19")
     private val textSubColor = Color.parseColor("#424940")
     private val borderColor = Color.parseColor("#DDE5DB")
@@ -87,11 +87,11 @@ class PdfReportGenerator(private val context: Context) {
         // 마지막 페이지 종료
         finishCurrentPage()
 
-        val fileName = "glucose_report_${SimpleDateFormat("yyyy_MM_dd_HHmm", Locale.getDefault()).format(Date())}.pdf"
+        val fileName = "glucose_report_${SimpleDateFormat("yyyy_MM_dd_HHmmss_SSS", Locale.getDefault()).format(Date())}.pdf"
         val file = File(context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), fileName)
 
         return try {
-            pdfDocument?.writeTo(FileOutputStream(file))
+            FileOutputStream(file).use { pdfDocument?.writeTo(it) }
             file
         } catch (e: Exception) {
             e.printStackTrace()
@@ -108,6 +108,7 @@ class PdfReportGenerator(private val context: Context) {
         val pageInfo = PdfDocument.PageInfo.Builder(pageWidth.toInt(), pageHeight.toInt(), pageNum).create()
         currentPage = pdfDocument?.startPage(pageInfo)
         currentCanvas = currentPage?.canvas
+        currentCanvas?.drawColor(Color.WHITE)
         
         drawHeader()
         currentY = headerHeight + 45f // 헤더 바 밑에 공백 추가 (약 1.5cm~2cm)
@@ -357,6 +358,7 @@ class PdfReportGenerator(private val context: Context) {
         
         val combinedMemos = (data.glucoseRecords.filter { it.memo.isNotEmpty() }.map { it.timestamp to "${context.getString(com.example.glucoseguard.R.string.glucose)}: ${it.memo}" } +
                            data.insulinRecords.filter { it.memo.isNotEmpty() }.map { it.timestamp to "${context.getString(com.example.glucoseguard.R.string.insulin)}: ${it.memo}" })
+                           .plus(data.mealRecords.map { it.timestamp to "건강 메모: ${it.memo}" })
                            .sortedByDescending { it.first }
                            .take(20)
 
@@ -386,6 +388,7 @@ class PdfReportGenerator(private val context: Context) {
         data.insulinRecords.forEach {
             allRecords.add(UnifiedRow(it.timestamp, "-", "-", "${it.dosage}U (${it.type})", it.memo))
         }
+        data.mealRecords.forEach { allRecords.add(UnifiedRow(it.timestamp, "-", "건강 메모", "-", it.memo)) }
         allRecords.sortBy { it.timestamp }
 
         if (allRecords.isEmpty()) {
@@ -451,15 +454,31 @@ class PdfReportGenerator(private val context: Context) {
         currentY += rowHeight
     }
 
-    private fun drawTableRow(values: Array<String>, widths: FloatArray, isHeader: Boolean) {
+    private fun drawTableRow(values: Array<String>, widths: FloatArray, isHeader: Boolean, splitLongMemo: Boolean = true) {
         val paint = TextPaint().apply {
             textSize = if (isHeader) 10f else 9f
             typeface = if (isHeader) Typeface.DEFAULT_BOLD else Typeface.DEFAULT
             color = if (isHeader) Color.WHITE else textMainColor
         }
 
+        val fullMemo = StaticLayout.Builder.obtain(values.last(),0,values.last().length,paint,(widths.last()-10f).toInt()).build()
+        val maxLines = ((bottomLimit-headerHeight-50f)/(paint.fontSpacing+2f)).toInt().coerceAtLeast(1)
+        if(splitLongMemo && fullMemo.lineCount>maxLines) {
+            var offset=0
+            var line=0
+            while(line<fullMemo.lineCount) {
+                val lastLine=minOf(line+maxLines,fullMemo.lineCount)-1
+                val end=fullMemo.getLineEnd(lastLine)
+                val chunk=values.copyOf()
+                chunk[chunk.lastIndex]=values.last().substring(offset,end).trimEnd('\n','\r')
+                if(line>0) for(i in 0 until chunk.lastIndex) chunk[i]=""
+                drawTableRow(chunk,widths,isHeader,false)
+                offset=end;line=lastLine+1
+            }
+            return
+        }
         // Calculate row height based on longest text (memo)
-        val memoWidth = widths.last().toInt()
+        val memoWidth = (widths.last()-10f).toInt()
         val staticLayout = StaticLayout.Builder.obtain(values.last(), 0, values.last().length, paint, memoWidth).build()
         
         val rowHeight = Math.max(25f, staticLayout.height.toFloat() + 10f)
@@ -505,16 +524,20 @@ class PdfReportGenerator(private val context: Context) {
     }
 
     private fun drawWrappedText(text: String, paint: TextPaint) {
-        val staticLayout = StaticLayout.Builder.obtain(text, 0, text.length, paint, contentWidth.toInt())
-            .setAlignment(Layout.Alignment.ALIGN_NORMAL)
-            .build()
-        
-        ensureSpaceOrNewPage(staticLayout.height.toFloat())
-        currentCanvas?.save()
-        currentCanvas?.translate(margin, currentY)
-        staticLayout.draw(currentCanvas)
-        currentCanvas?.restore()
-        currentY += staticLayout.height.toFloat()
+        val layout=StaticLayout.Builder.obtain(text,0,text.length,paint,contentWidth.toInt()).build()
+        for(line in 0 until layout.lineCount) {
+            val top=layout.getLineTop(line)
+            val height=(layout.getLineBottom(line)-top).toFloat()
+            ensureSpaceOrNewPage(height)
+            currentCanvas?.let { canvas ->
+                canvas.save()
+                canvas.clipRect(margin,currentY,margin+contentWidth,currentY+height)
+                canvas.translate(margin,currentY-top)
+                layout.draw(canvas)
+                canvas.restore()
+            }
+            currentY+=height
+        }
     }
 
     private fun drawPdfSafeLineChart(entries: List<ChartEntry>, width: Float, height: Float, type: String): Bitmap {
@@ -733,4 +756,3 @@ class PdfReportGenerator(private val context: Context) {
         val memo: String
     )
 }
-

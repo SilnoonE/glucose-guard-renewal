@@ -6,12 +6,12 @@
     android:layout_marginBottom="12dp"
     android:clickable="true"
     android:focusable="true"
-    app:rippleColor="#FFE082"
-    app:cardBackgroundColor="#FFF8E1"
+    app:rippleColor="@color/primary_light"
+    app:cardBackgroundColor="@color/primary_light"
     app:cardCornerRadius="16dp"
     app:cardElevation="2dp"
     app:strokeWidth="1dp"
-    app:strokeColor="#FFE082">
+    app:strokeColor="@color/primary">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="HEALTH NOTE"
-                android:textColor="#F57F17"
+                android:textColor="@color/primary"
                 android:textSize="11sp"
                 android:textStyle="bold"
                 android:letterSpacing="0.1"/>

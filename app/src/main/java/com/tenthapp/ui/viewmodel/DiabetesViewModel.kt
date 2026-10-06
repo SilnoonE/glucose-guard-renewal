@@ -6,6 +6,8 @@ import com.example.glucoseguard.data.model.InsulinRecord
 import com.example.glucoseguard.data.model.MealRecord
 import com.example.glucoseguard.data.repository.DiabetesRepository
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.CancellationException
+import com.example.glucoseguard.util.BackupCodec
 
 class DiabetesViewModel(private val repository: DiabetesRepository) : ViewModel() {
 
@@ -13,8 +15,9 @@ class DiabetesViewModel(private val repository: DiabetesRepository) : ViewModel(
     val allInsulinRecords: LiveData<List<InsulinRecord>> = repository.allInsulinRecords.asLiveData()
     val allMealRecords: LiveData<List<MealRecord>> = repository.allMealRecords.asLiveData()
 
-    fun insertGlucose(value: Int, category: String, memo: String = "", timestamp: Long = System.currentTimeMillis()) {
+    fun insertGlucose(value: Int, category: String, memo: String = "", timestamp: Long = System.currentTimeMillis(), onResult: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
+            try {
             val record = GlucoseRecord(
                 value = value,
                 timestamp = timestamp,
@@ -22,11 +25,15 @@ class DiabetesViewModel(private val repository: DiabetesRepository) : ViewModel(
                 memo = memo
             )
             repository.insertGlucose(record)
+            onResult(true)
+            } catch (e: CancellationException) { throw e }
+              catch (e: Exception) { onResult(false) }
         }
     }
 
-    fun updateGlucose(id: Long, value: Int, category: String, memo: String, timestamp: Long) {
+    fun updateGlucose(id: Long, value: Int, category: String, memo: String, timestamp: Long, onResult: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
+            try {
             val record = GlucoseRecord(
                 id = id,
                 value = value,
@@ -35,11 +42,15 @@ class DiabetesViewModel(private val repository: DiabetesRepository) : ViewModel(
                 memo = memo
             )
             repository.updateGlucose(record)
+            onResult(true)
+            } catch (e: CancellationException) { throw e }
+              catch (e: Exception) { onResult(false) }
         }
     }
 
-    fun insertInsulin(type: String, dosage: Float, injectionSite: String = "", memo: String = "", timestamp: Long = System.currentTimeMillis()) {
+    fun insertInsulin(type: String, dosage: Float, injectionSite: String = "", memo: String = "", timestamp: Long = System.currentTimeMillis(), onResult: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
+            try {
             val record = InsulinRecord(
                 type = type,
                 dosage = dosage,
@@ -48,11 +59,15 @@ class DiabetesViewModel(private val repository: DiabetesRepository) : ViewModel(
                 memo = memo
             )
             repository.insertInsulin(record)
+            onResult(true)
+            } catch (e: CancellationException) { throw e }
+              catch (e: Exception) { onResult(false) }
         }
     }
 
-    fun updateInsulin(id: Long, type: String, dosage: Float, injectionSite: String, memo: String, timestamp: Long) {
+    fun updateInsulin(id: Long, type: String, dosage: Float, injectionSite: String, memo: String, timestamp: Long, onResult: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
+            try {
             val record = InsulinRecord(
                 id = id,
                 type = type,
@@ -62,27 +77,24 @@ class DiabetesViewModel(private val repository: DiabetesRepository) : ViewModel(
                 memo = memo
             )
             repository.updateInsulin(record)
+            onResult(true)
+            } catch (e: CancellationException) { throw e }
+              catch (e: Exception) { onResult(false) }
         }
     }
 
-    fun insertMeal(memo: String, timestamp: Long = System.currentTimeMillis()) {
+    fun insertMeal(memo: String, timestamp: Long = System.currentTimeMillis(), onResult: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
-            val record = MealRecord(
-                timestamp = timestamp,
-                memo = memo
-            )
-            repository.insertMeal(record)
+            try { repository.insertMeal(MealRecord(timestamp=timestamp,memo=memo));onResult(true) }
+            catch(e: CancellationException) { throw e }
+            catch(e: Exception) { onResult(false) }
         }
     }
-
-    fun updateMeal(id: Long, memo: String, timestamp: Long) {
+    fun updateMeal(id: Long, memo: String, timestamp: Long, onResult: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
-            val record = MealRecord(
-                id = id,
-                timestamp = timestamp,
-                memo = memo
-            )
-            repository.updateMeal(record)
+            try { repository.updateMeal(MealRecord(id=id,timestamp=timestamp,memo=memo));onResult(true) }
+            catch(e: CancellationException) { throw e }
+            catch(e: Exception) { onResult(false) }
         }
     }
 
@@ -96,6 +108,13 @@ class DiabetesViewModel(private val repository: DiabetesRepository) : ViewModel(
         }
     }
 
+    fun importBackup(records: BackupCodec.Records, onResult: (Result<Int>) -> Unit) {
+        viewModelScope.launch {
+            try { onResult(Result.success(repository.importBackup(records))) }
+            catch (e: CancellationException) { throw e }
+            catch (e: Exception) { onResult(Result.failure(e)) }
+        }
+    }
     fun clearAllData() {
         viewModelScope.launch {
             repository.deleteAllData()

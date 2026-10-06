@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.glucoseguard.data.dao.GlucoseDao
 import com.example.glucoseguard.data.dao.InsulinDao
 import com.example.glucoseguard.data.dao.MealDao
@@ -20,6 +22,20 @@ abstract class AppDatabase : RoomDatabase() {
     companion object {
         @Volatile
         private var INSTANCE: AppDatabase? = null
+        val MIGRATION_1_2 = object : Migration(1, 2) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("CREATE TABLE IF NOT EXISTS `meal_records` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timestamp` INTEGER NOT NULL, `memo` TEXT NOT NULL)")
+                // Add only missing optional columns; retain every existing reading.
+                for ((table, column) in listOf("glucose_records" to "memo", "insulin_records" to "memo", "insulin_records" to "injectionSite")) {
+                    val names = mutableSetOf<String>()
+                    db.query("PRAGMA table_info(`$table`)").use { cursor ->
+                        val index = cursor.getColumnIndexOrThrow("name")
+                        while (cursor.moveToNext()) names += cursor.getString(index)
+                    }
+                    if (column !in names) db.execSQL("ALTER TABLE `$table` ADD COLUMN `$column` TEXT NOT NULL DEFAULT ''")
+                }
+            }
+        }
 
         fun getDatabase(context: Context): AppDatabase {
             return INSTANCE ?: synchronized(this) {
@@ -28,7 +44,7 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "diabetes_database"
                 )
-                // .fallbackToDestructiveMigration() // 업데이트 시 데이터 삭제 방지를 위해 주석 처리하거나 제거
+                .addMigrations(MIGRATION_1_2)
                 .build()
                 INSTANCE = instance
                 instance

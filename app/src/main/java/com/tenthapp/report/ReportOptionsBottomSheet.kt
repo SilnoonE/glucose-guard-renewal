@@ -8,10 +8,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.example.glucoseguard.R
 import com.example.glucoseguard.databinding.BottomSheetReportOptionsBinding
 
-class ReportOptionsBottomSheet(
-    private val onGenerate: (periodDays: Int, options: ReportOptions) -> Unit
-) : BottomSheetDialogFragment() {
-
+class ReportOptionsBottomSheet : BottomSheetDialogFragment() {
     private var _binding: BottomSheetReportOptionsBinding? = null
     private val binding get() = _binding!!
 
@@ -43,7 +40,7 @@ class ReportOptionsBottomSheet(
                 includeMemo = true
             )
 
-            onGenerate(periodDays, options)
+            parentFragmentManager.setFragmentResult(TAG,Bundle().apply { putInt("days",periodDays) })
             dismiss()
         }
     }

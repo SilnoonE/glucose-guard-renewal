@@ -13,7 +13,7 @@ class DiabetesApplication : Application() {
         DiabetesRepository(
             database.glucoseDao(), 
             database.insulinDao(),
-            database.mealDao()
+            database.mealDao(), database
         ) 
     }
 
@@ -23,6 +23,6 @@ class DiabetesApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        MobileAds.initialize(this) {}
+
     }
 }

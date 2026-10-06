@@ -71,30 +71,17 @@ class RecordAdapter(
                     binding.tvTime.text = dateTimeFormat.format(Date(item.timestamp))
                     binding.tvValue.text = "${item.value} mg/dL"
                     
-                    val sharedPref = context.getSharedPreferences("diabetes_prefs", Context.MODE_PRIVATE)
-                    val min = sharedPref.getInt("target_min", 70)
-                    val max = sharedPref.getInt("target_max", 130)
-
-                    when {
-                        item.value < min -> {
-                            binding.indicatorView.setBackgroundColor(ContextCompat.getColor(context, R.color.status_low))
-                            binding.tvValue.setTextColor(ContextCompat.getColor(context, R.color.status_low))
-                            binding.tvStatusTag.text = context.getString(R.string.status_low)
-                            binding.tvStatusTag.setTextColor(ContextCompat.getColor(context, R.color.status_low))
-                        }
-                        item.value > max -> {
-                            binding.indicatorView.setBackgroundColor(ContextCompat.getColor(context, R.color.status_high))
-                            binding.tvValue.setTextColor(ContextCompat.getColor(context, R.color.status_high))
-                            binding.tvStatusTag.text = context.getString(R.string.status_high)
-                            binding.tvStatusTag.setTextColor(ContextCompat.getColor(context, R.color.status_high))
-                        }
-                        else -> {
-                            binding.indicatorView.setBackgroundColor(ContextCompat.getColor(context, R.color.status_normal))
-                            binding.tvValue.setTextColor(ContextCompat.getColor(context, R.color.status_normal))
-                            binding.tvStatusTag.text = context.getString(R.string.status_normal)
-                            binding.tvStatusTag.setTextColor(ContextCompat.getColor(context, R.color.status_normal))
-                        }
+                    val status = com.example.glucoseguard.util.GlucosePolicy.classify(item.value, item.category, com.example.glucoseguard.util.TargetPreferences.read(context))
+                    val (label, color) = when (status) {
+                        com.example.glucoseguard.util.GlucosePolicy.Status.LOW -> R.string.status_low to R.color.status_low
+                        com.example.glucoseguard.util.GlucosePolicy.Status.BELOW_TARGET -> R.string.below_target to R.color.status_warning
+                        com.example.glucoseguard.util.GlucosePolicy.Status.ABOVE_TARGET -> R.string.above_target to R.color.status_high
+                        else -> R.string.within_target to R.color.primary
                     }
+                    binding.indicatorView.setBackgroundColor(ContextCompat.getColor(context, color))
+                    binding.tvValue.setTextColor(ContextCompat.getColor(context, color))
+                    binding.tvStatusTag.setText(label)
+                    binding.tvStatusTag.setTextColor(ContextCompat.getColor(context, color))
                 }
                 is InsulinRecord -> {
                     binding.indicatorView.setBackgroundColor(ContextCompat.getColor(context, R.color.secondary))
@@ -115,7 +102,7 @@ class RecordAdapter(
         fun bind(item: MealRecord) {
             binding.tvTime.text = timeFormat.format(Date(item.timestamp))
             binding.tvMemoContent.text = item.memo
-            binding.tvMemoContent.setTextColor(android.graphics.Color.parseColor("#4E342E")) // 진한 브라운 톤
+            binding.tvMemoContent.setTextColor(android.graphics.Color.parseColor("#18312E")) // 진한 브라운 톤
             
             binding.root.setOnClickListener { onItemClick(item) }
             binding.btnEditMemo.setOnClickListener { onEditClick(item) }
@@ -130,6 +117,11 @@ class RecordAdapter(
             oldItem is MealRecord && newItem is MealRecord -> oldItem.id == newItem.id
             else -> false
         }
-        override fun areContentsTheSame(oldItem: Any, newItem: Any) = oldItem == newItem
+        override fun areContentsTheSame(oldItem: Any, newItem: Any) = when {
+            oldItem is GlucoseRecord && newItem is GlucoseRecord -> oldItem.id == newItem.id && oldItem.value == newItem.value && oldItem.timestamp == newItem.timestamp && oldItem.category == newItem.category && oldItem.memo == newItem.memo
+            oldItem is InsulinRecord && newItem is InsulinRecord -> oldItem.id == newItem.id && oldItem.type == newItem.type && oldItem.dosage == newItem.dosage && oldItem.timestamp == newItem.timestamp && oldItem.injectionSite == newItem.injectionSite && oldItem.memo == newItem.memo
+            oldItem is MealRecord && newItem is MealRecord -> oldItem.id == newItem.id && oldItem.timestamp == newItem.timestamp && oldItem.memo == newItem.memo
+            else -> false
+        }
     }
 }

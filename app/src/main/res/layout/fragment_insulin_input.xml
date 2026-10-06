@@ -129,7 +129,8 @@
                     android:text="허벅지" />
             </com.google.android.material.chip.ChipGroup>
 
-            <com.google.android.material.button.MaterialButton
+<com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:hint="인슐린 종류·제품명 (선택)"><com.google.android.material.textfield.TextInputEditText android:id="@+id/et_insulin_type" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:maxLength="100" android:inputType="text"/></com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:hint="@string/memo_optional"><com.google.android.material.textfield.TextInputEditText android:id="@+id/et_insulin_memo" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:maxLength="2000" android:inputType="textMultiLine"/></com.google.android.material.textfield.TextInputLayout>            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_save_insulin"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"

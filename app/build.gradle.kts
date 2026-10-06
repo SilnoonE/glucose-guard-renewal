@@ -12,14 +12,24 @@ android {
         applicationId = "com.example.glucoseguard"
         minSdk = 24
         targetSdk = 36
-        versionCode = 20
-        versionName = "20"
+        versionCode = 22
+        versionName = "4.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
+        debug {
+            resValue("string", "admob_app_id", "ca-app-pub-3940256099942544~3347511713")
+            resValue("string", "admob_banner_id", "ca-app-pub-3940256099942544/6300978111")
+            resValue("string", "admob_pdf_interstitial_id", "ca-app-pub-3940256099942544/1033173712")
+            applicationIdSuffix = ".renewaltest"
+            versionNameSuffix = "-preview"
+        }
         release {
+            resValue("string", "admob_app_id", "ca-app-pub-3940256099942544~3347511713")
+            resValue("string", "admob_banner_id", "ca-app-pub-3940256099942544/6300978111")
+            resValue("string", "admob_pdf_interstitial_id", "ca-app-pub-3940256099942544/1033173712")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

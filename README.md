@@ -9,6 +9,7 @@
 - [전후 코드 비교](https://github.com/SilnoonE/glucose-guard-renewal/compare/before-renewal...after-renewal)
 - [개선 과정과 주요 파일](docs/RENEWAL.md)
 - [공개 범위와 보안 처리](docs/PUBLIC_SCOPE.md)
+- [하단 네비게이션 여백 수정](docs/NAVIGATION_SPACING.md): 후속 수정은 현재 `main`에 반영하며 최초 리뉴얼 태그는 보존합니다.
 
 과거 개발 이력을 재구성한 저장소가 아니라, 보존된 개선 전 앱 모듈과 현재 리뉴얼 소스를 두 단계로 기록한 저장소입니다. 빌드 도구 설정은 공통 공개본 설정을 사용합니다.
 

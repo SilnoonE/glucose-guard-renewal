@@ -107,8 +107,14 @@ class MainActivity : AppCompatActivity() {
             keyboardVisible=insets.isVisible(androidx.core.view.WindowInsetsCompat.Type.ime())
             binding.bottomNavigation.visibility=if(keyboardVisible || !mainUiVisible) View.GONE else View.VISIBLE
             updateAdVisibility()
-            insets
+            // The root already reserves the system bars. Do not let Material's
+            // BottomNavigationView add the same bottom inset a second time.
+            androidx.core.view.WindowInsetsCompat.Builder(insets)
+                .setInsets(androidx.core.view.WindowInsetsCompat.Type.systemBars(), androidx.core.graphics.Insets.NONE)
+                .setInsetsIgnoringVisibility(androidx.core.view.WindowInsetsCompat.Type.systemBars(), androidx.core.graphics.Insets.NONE)
+                .build()
         }
+        androidx.core.view.ViewCompat.requestApplyInsets(binding.root)
         openNotificationInput(intent)
     }
 
